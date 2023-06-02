@@ -1,0 +1,53 @@
+// index Menu
+.menu_list {
+  width: 225px;
+}
+
+// menu items
+
+.menu_items {
+  background-color: transparent;
+  padding: 12px 15px;
+  width: 100%;
+  display: flex;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(22, 24, 35, 0.06);
+  }
+}
+
+// header menu
+// menu items
+.menu_item,
+.menu_login {
+  position: relative;
+  height: 50px;
+  border-top: 1px solid rgba(22, 24, 35, 0.1);
+  line-height: 1.8rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(22, 24, 35, 0.06);
+  }
+}
+.menu_item_btn,
+.menu_login_btn {
+  font-size: 2rem;
+  background-color: transparent;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.menu_item_title,
+.menu_login_title {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu_body {
+  overflow-y: auto;
+}

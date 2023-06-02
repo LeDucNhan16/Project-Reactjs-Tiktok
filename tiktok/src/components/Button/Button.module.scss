@@ -1,0 +1,84 @@
+.wrapper {
+  min-width: 100px;
+  border-radius: 2px;
+  background-color: var(--white);
+  font-weight: 500;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 8px 5px;
+
+  + .wrapper {
+    margin-left: 8px;
+  }
+}
+
+.supperSmall {
+  color: var(--primary);
+  border-color: currentColor;
+
+  &:hover {
+    background-color: rgba(254, 44, 85, 0.06);
+  }
+}
+
+.small {
+  border-color: rgba(22, 24, 35, 0.12);
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+.primary {
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+      #fe2c55;
+  }
+}
+
+.large {
+  min-width: 170px;
+  color: var(--primary);
+  border-color: currentColor;
+  padding: 6px 8px;
+  font-size: 1.8rem;
+  &:hover {
+    background-color: rgba(254, 44, 85, 0.06);
+  }
+}
+
+.largePay {
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+  padding: 6px 45px;
+  font-size: 1.8rem;
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+      #fe2c55;
+  }
+}
+
+.icon + .title,
+.title + .icon {
+  margin-left: 8px;
+}
+
+.bottomRight {
+  border-radius: 999px;
+  border-color: rgba(22, 24, 35, 0.2);
+
+  &:hover {
+    border-color: rgba(22, 24, 35, 0.4);
+  }
+}
+
+.icon {
+  display: inline-block;
+}
