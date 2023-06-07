@@ -1,18 +1,21 @@
-import axios from "axios";
+import { useEffect, useRef, useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faSpinner,
   faCircleXmark,
   faMagnifyingGlass,
   //   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
+import "tippy.js/dist/tippy.css";
+import Tippy from "@tippyjs/react";
+
 import classNames from "classnames/bind";
 import HeadLessTippy from "@tippyjs/react/headless";
-import Tippy from "@tippyjs/react";
-import "tippy.js/dist/tippy.css";
 import { Wrapper as PopperWrapper } from "../../../Popper";
 import styles from "./Search.module.scss";
 import AccountItem from "../../../../AccountItem";
-import { useEffect, useRef, useState } from "react";
+import * as SearchServices from "../../../../../Services/SearchServices";
 
 const cx = classNames.bind(styles);
 
@@ -20,6 +23,7 @@ function Search() {
   const [searchResult, setSearchResult] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [searchShow, setSearchShow] = useState(true);
+  const [searchLoading, setSearchLoading] = useState(true);
 
   const inputRef = useRef();
 
@@ -33,16 +37,16 @@ function Search() {
     if (!searchValue.trim()) {
       return;
     }
-    axios
-      .get(`https://tiktok.fullstack.edu.vn/api/users/search`, {
-        params: {
-          q: searchValue,
-          type: "less",
-        },
-      })
-      .then((res) => {
-        setSearchResult(res.data.data);
-      });
+    const fatchApi = async () => {
+      setSearchLoading(false);
+
+      const result = await SearchServices.search(searchValue);
+
+      setSearchResult(result);
+      setSearchLoading(false);
+    };
+
+    fatchApi();
   }, [searchValue]);
 
   return (
@@ -72,12 +76,14 @@ function Search() {
             onChange={(e) => setSearchValue(e.target.value)}
             onFocus={() => setSearchShow(true)}
           />
-          {!!searchValue && (
+          {!!searchValue && !searchLoading && (
             <button className={cx("clear")} onClick={handleClearSearch}>
               <FontAwesomeIcon icon={faCircleXmark} />
             </button>
           )}
-          {/* <FontAwesomeIcon className={cx("loading")} icon={faSpinner} /> */}
+          {!!searchValue && searchLoading && (
+            <FontAwesomeIcon className={cx("loading")} icon={faSpinner} />
+          )}
           <Tippy
             delay={[0, 200]}
             content="Tìm kiếm"

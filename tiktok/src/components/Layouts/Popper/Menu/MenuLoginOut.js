@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import classNames from "classnames/bind";
 import { IconLogOut } from "../../Icons";
 import styles from "./Menu.module.scss";
@@ -14,5 +15,9 @@ function MenuLoginOut({ onBack }) {
     </header>
   );
 }
+
+MenuLoginOut.propTypes = {
+  onBack: PropTypes.node.isRequired,
+};
 
 export default MenuLoginOut;
