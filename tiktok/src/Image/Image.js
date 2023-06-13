@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { forwardRef, useState } from "react";
+import classNames from "classnames";
+
 import Images from "../assets/Images";
 import style from "./Image.module.scss";
-import classNames from "classnames";
 
 const Image = forwardRef(
   ({ alt, src, fallback = Images.noImage, className, ...props }, ref) => {

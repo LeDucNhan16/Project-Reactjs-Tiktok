@@ -14,8 +14,8 @@ import classNames from "classnames/bind";
 import HeadLessTippy from "@tippyjs/react/headless";
 import { Wrapper as PopperWrapper } from "../../../Popper";
 import styles from "./Search.module.scss";
-import AccountItem from "../../../../AccountItem";
-import * as SearchServices from "../../../../../Services/SearchServices";
+import AccountItem from "../../../../components/AccountItem/AccountItem";
+import * as searchServices from "../../../../services/searchServices";
 
 const cx = classNames.bind(styles);
 
@@ -37,16 +37,17 @@ function Search() {
     if (!searchValue.trim()) {
       return;
     }
-    const fatchApi = async () => {
+    const fetchApi = async () => {
       setSearchLoading(false);
 
-      const result = await SearchServices.search(searchValue);
+      const result = await searchServices.search(searchValue);
 
       setSearchResult(result);
+
       setSearchLoading(false);
     };
 
-    fatchApi();
+    fetchApi();
   }, [searchValue]);
 
   return (

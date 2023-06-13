@@ -1,4 +1,4 @@
-import * as request from "../utils/request";
+import * as request from "../ulti/request";
 
 export const search = async (q, type = "less") => {
   try {
@@ -11,6 +11,6 @@ export const search = async (q, type = "less") => {
 
     return res.data;
   } catch (error) {
-    console.log("error");
+    console.log("error services search");
   }
 };
