@@ -6,11 +6,13 @@ import Live from "../pages/Live/index.js";
 import Profile from "../pages/Profile/index.js";
 import Upload from "../pages/Upload/index.js";
 import Search from "../pages/Search/index.js";
+import Discovery from "../pages/Discovery";
 
 //
 const publicRoutes = [
   { path: config.routers.Home, component: Home },
   { path: config.routers.Following, component: Following },
+  { path: config.routers.Discovery, component: Discovery },
   { path: config.routers.Live, component: Live },
   { path: config.routers.Profile, component: Profile },
   { path: config.routers.Search, component: Search, layout: null },
