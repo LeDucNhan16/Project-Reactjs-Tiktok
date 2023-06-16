@@ -14,7 +14,7 @@ import classNames from "classnames/bind";
 import HeadLessTippy from "@tippyjs/react/headless";
 import { Wrapper as PopperWrapper } from "../../../Popper";
 import styles from "./Search.module.scss";
-import AccountItem from "../../../../components/AccountItem/AccountItem";
+import AccountItem from "../../../../components/SuggetedAccounts/SuggetstedAccounts";
 import * as searchServices from "../../../../services/searchServices";
 
 const cx = classNames.bind(styles);

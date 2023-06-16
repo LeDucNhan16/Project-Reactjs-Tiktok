@@ -1,0 +1,77 @@
+.wrapper {
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.username__list {
+  font-size: 1.4rem;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  color: rgba(22, 24, 35, 0.75);
+}
+
+.accounts__items {
+  padding-left: 20px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+.accounts__avatar {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.accounts__info {
+  padding-left: 10px;
+  overflow: hidden;
+  flex: 1;
+  padding-top: 15px;
+}
+
+.accounts__name {
+  color: rgb(22, 24, 35);
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  max-width: 145px;
+  text-overflow: ellipsis;
+  display: flex;
+}
+
+.accounts__username {
+  font-size: 1.2rem;
+  color: rgba(22, 24, 35, 0.5);
+  font-weight: 400;
+  padding-bottom: 15px;
+  display: flex;
+}
+
+.see__more {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: transparent;
+}
+
+.see__more__title {
+  padding: 20px 20px 15px 20px;
+  color: rgb(254, 44, 85);
+  cursor: pointer;
+}
+
+.see__more__list {
+  width: 100%;
+}

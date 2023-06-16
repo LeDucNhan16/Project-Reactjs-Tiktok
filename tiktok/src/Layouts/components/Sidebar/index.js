@@ -1,5 +1,4 @@
 import classNames from "classnames/bind";
-
 import config from "../../../config";
 import styles from "./Silebar.module.scss";
 import Menu from "./Menu/Menu";
@@ -14,6 +13,8 @@ import {
   IconUsers,
   IconUsersActive,
 } from "../../Icons/Icons";
+import SuggestedAccountItem from "../../../components/SuggetedAccounts/SuggetstedAccounts";
+import { AccountItemSidebar } from "../../../components/SuggetedAccounts";
 
 const cx = classNames.bind(styles);
 
@@ -45,6 +46,9 @@ function Sidebar() {
           activeIcon={<IconCameraActive />}
           title="Live"
         />
+      </Menu>
+      <Menu>
+        <SuggestedAccountItem label="Following accounts" />
       </Menu>
     </aside>
   );

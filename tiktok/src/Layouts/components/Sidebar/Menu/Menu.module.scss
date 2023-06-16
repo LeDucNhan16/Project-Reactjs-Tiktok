@@ -1,6 +1,11 @@
+.menu {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0 10px;
+}
+
 .menu__items {
   display: flex;
-  padding: 6px 8px 6px;
+  padding: 6px 8px 6px 20px;
   transition: background-color ease-in-out 200ms;
   border-radius: 5px;
 
