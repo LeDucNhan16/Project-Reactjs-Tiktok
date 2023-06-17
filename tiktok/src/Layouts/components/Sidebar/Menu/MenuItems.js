@@ -22,8 +22,8 @@ function Menu({ to, icon, activeIcon, title }) {
 Menu.propTypes = {
   to: PropTypes.string,
   title: PropTypes.string,
-  icon: PropTypes.node,
-  activeIcon: PropTypes.node,
+  icon: PropTypes.node.isRequired,
+  activeIcon: PropTypes.node.isRequired,
 };
 
 export default Menu;

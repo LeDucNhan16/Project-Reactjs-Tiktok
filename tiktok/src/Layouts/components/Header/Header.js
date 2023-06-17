@@ -16,15 +16,15 @@ import styles from "./Header.module.scss";
 import Button from "../../../components/Button/Button";
 import Menu from "../../Popper/Menu";
 import {
-  IconCoin,
-  IconHelpFeedback,
-  IconKeyboardShortcuts,
-  IconLanguage,
-  IconLightDarkMode,
-  IconMessage,
-  IconNotification,
-  IconSetting,
-  IconViewProfile,
+  CoinIcon,
+  HelpFeedbackIcon,
+  KeyboardShortcutsIcon,
+  LanguageIcon,
+  LightDarkModeIcon,
+  MessageIcon,
+  NotificationIcon,
+  SettingIcon,
+  ViewProfileIcon,
 } from "../../Icons/Icons";
 import Search from "./Search/Search";
 import config from "../../../config";
@@ -36,7 +36,7 @@ const currentResult = true;
 
 const MENU_ITEMS = [
   {
-    icon: <IconLanguage />,
+    icon: <LanguageIcon />,
     title: "Tiếng việt",
     children: {
       title: "Quay lại",
@@ -165,11 +165,11 @@ const MENU_ITEMS = [
     },
   },
   {
-    icon: <IconHelpFeedback />,
+    icon: <HelpFeedbackIcon />,
     title: "Phản hồi và trợ giúp",
   },
   {
-    icon: <IconKeyboardShortcuts />,
+    icon: <KeyboardShortcutsIcon />,
     title: "Phím tắt trên bàn phím",
     children: {
       title: "Quay lại",
@@ -198,7 +198,7 @@ const MENU_ITEMS = [
     },
   },
   {
-    icon: <IconLightDarkMode />,
+    icon: <LightDarkModeIcon />,
     title: "Chế độ tối",
   },
 ];
@@ -206,16 +206,16 @@ const MENU_ITEMS = [
 function Header() {
   const MENU_ITEMS_LOGIN = [
     {
-      icon: <IconViewProfile />,
+      icon: <ViewProfileIcon />,
       title: "Xem hồ sơ",
     },
     {
-      icon: <IconCoin />,
+      icon: <CoinIcon />,
       title: "Nhận xu",
       to: "/upload",
     },
     {
-      icon: <IconSetting />,
+      icon: <SettingIcon />,
       title: "Cài đặt",
     },
     ...MENU_ITEMS,
@@ -317,7 +317,7 @@ function Header() {
                 hideOnClick={false}
               >
                 <button className={cx("login_btn")}>
-                  <IconMessage />
+                  <MessageIcon />
                 </button>
               </Tippy>
               <Tippy
@@ -327,7 +327,7 @@ function Header() {
                 hideOnClick={false}
               >
                 <button className={cx("login_btn")}>
-                  <IconNotification />
+                  <NotificationIcon />
                 </button>
               </Tippy>
             </>

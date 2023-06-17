@@ -1,0 +1,36 @@
+.wrapper {
+  padding-left: 15px;
+  overflow: hidden;
+
+  .footer__items {
+    font-size: 1.2rem;
+    padding: 5px 7px;
+    color: rgba(22, 24, 35, 0.5);
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: revert;
+    }
+  }
+
+  .footer__item_more {
+    padding: 5px 7px;
+    font-size: 1.2rem;
+    color: rgba(22, 24, 35, 0.5);
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: revert;
+    }
+  }
+
+  .footer__item__end {
+    padding: 15px 7px;
+    font-size: 1.4rem;
+    color: rgba(22, 24, 35, 0.5);
+    display: block;
+    cursor: context-menu;
+  }
+}

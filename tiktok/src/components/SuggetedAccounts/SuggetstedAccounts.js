@@ -42,8 +42,10 @@ function SuggestedAccountItem({ label }) {
         title="LANGTU Keyboard"
         nickname="langtu_official_store"
       />
-      <button className={cx("see__more")} onClick={handleSeeMoreSidebar}>
-        <span className={cx("see__more__title")}>See More</span>
+      <button className={cx("see__more")}>
+        <span className={cx("see__more__title")} onClick={handleSeeMoreSidebar}>
+          See More
+        </span>
         {show && (
           <div className={cx("see__more__list")}>
             <AccountItemSidebar

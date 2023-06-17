@@ -4,17 +4,17 @@ import styles from "./Silebar.module.scss";
 import Menu from "./Menu/Menu";
 import { MenuItems } from "./Menu";
 import {
-  IconCamera,
-  IconCameraActive,
-  IconDiscovery,
-  IconDiscoveryActive,
-  IconHome,
-  IconHomeActive,
-  IconUsers,
-  IconUsersActive,
+  CameraIcon,
+  CameraActiveIcon,
+  DiscoveryIcon,
+  DiscoveryActiveIcon,
+  HomeIcon,
+  HomeActiveIcon,
+  UsersIcon,
+  UsersActiveIcon,
 } from "../../Icons/Icons";
 import SuggestedAccountItem from "../../../components/SuggetedAccounts/SuggetstedAccounts";
-import { AccountItemSidebar } from "../../../components/SuggetedAccounts";
+import Footer from "./FooterSidebar/Footer";
 
 const cx = classNames.bind(styles);
 
@@ -24,31 +24,34 @@ function Sidebar() {
       <Menu>
         <MenuItems
           to={config.routers.Home}
-          icon={<IconHome />}
-          activeIcon={<IconHomeActive />}
+          icon={<HomeIcon />}
+          activeIcon={<HomeActiveIcon />}
           title="For You"
         />
         <MenuItems
           to={config.routers.Following}
-          icon={<IconUsers />}
-          activeIcon={<IconUsersActive />}
+          icon={<UsersIcon />}
+          activeIcon={<UsersActiveIcon />}
           title="Are Following"
         />
         <MenuItems
           to={config.routers.Discovery}
-          icon={<IconDiscovery />}
-          activeIcon={<IconDiscoveryActive />}
+          icon={<DiscoveryIcon />}
+          activeIcon={<DiscoveryActiveIcon />}
           title="Discover "
         />
         <MenuItems
           to={config.routers.Live}
-          icon={<IconCamera />}
-          activeIcon={<IconCameraActive />}
+          icon={<CameraIcon />}
+          activeIcon={<CameraActiveIcon />}
           title="Live"
         />
       </Menu>
       <Menu>
         <SuggestedAccountItem label="Following accounts" />
+      </Menu>
+      <Menu>
+        <Footer />
       </Menu>
     </aside>
   );
