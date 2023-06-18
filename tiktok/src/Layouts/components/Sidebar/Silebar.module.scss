@@ -1,5 +1,7 @@
 .wrapper {
   width: 240px;
+  overflow-y: auto;
+  max-height: min(100vh);
 }
 
 .search_title {

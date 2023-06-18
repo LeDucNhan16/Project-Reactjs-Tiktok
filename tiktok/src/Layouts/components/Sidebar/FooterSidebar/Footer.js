@@ -15,27 +15,27 @@ function Footer() {
         to="https://www.tiktok.com/about?lang=vi-VN"
         target="_blank"
       >
-        Giới thiệu
+        About
       </Link>
       <Link
         className={cx("footer__items")}
         to="https://newsroom.tiktok.com/"
         target="_blank"
       >
-        Bảng tin
+        Newsroom
       </Link>
       <Link
         className={cx("footer__items")}
         to="https://www.tiktok.com/about/contact?lang=vi-VN"
       >
-        Liên hệ
+        Contact
       </Link>
       <Link
         className={cx("footer__items")}
         to="https://careers.tiktok.com/"
         target="_blank"
       >
-        Sự nghiệp
+        Careers
       </Link>
       <Link
         className={cx("footer__items")}
@@ -49,20 +49,20 @@ function Footer() {
         to="https://www.tiktok.com/forgood"
         target="_blank"
       >
-        Quảng cáo
+        TikTok for Good
       </Link>
       <Link
         className={cx("footer__items")}
         to="https://www.tiktok.com/business/vi?attr_medium=tt_official_site_guidance&attr_source=tt_official_site&refer=tiktok_web&tt4b_lang_redirect=1"
       >
-        Developers
+        Advertise
       </Link>
       <Link
         className={cx("footer__items")}
         to="https://developers.tiktok.com/?refer=tiktok_web"
         target="_blank"
       >
-        Minh bạch
+        Developers
       </Link>
       <Link
         className={cx("footer__items")}
@@ -76,35 +76,35 @@ function Footer() {
         to="https://www.tiktok.com/tiktok-rewards/vi-VN"
         target="_blank"
       >
-        Trợ giúp
+        TikTok Embeds
       </Link>
       <Link
         className={cx("footer__items")}
         to="https://www.tiktok.com/embed"
         target="_blank"
       >
-        An toàn
+        Help
       </Link>
       <Link
         className={cx("footer__items")}
         to="https://support.tiktok.com/vi"
         target="_blank"
       >
-        Quyền riêng tư
+        Safety
       </Link>
       <Link
         className={cx("footer__items")}
         to="https://www.tiktok.com/safety/vi-vn/"
         target="_blank"
       >
-        Cổng thông tin Tác giả
+        Creator Portal
       </Link>
       <Link
         className={cx("footer__items")}
         to="https://www.tiktok.com/legal/page/row/terms-of-service/vi-VN"
         target="_blank"
       >
-        Hướng dẫn Cộng đồng
+        Community Guidelines
       </Link>
 
       <Tippy

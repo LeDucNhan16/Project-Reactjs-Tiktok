@@ -32,13 +32,13 @@ function Sidebar() {
           to={config.routers.Following}
           icon={<UsersIcon />}
           activeIcon={<UsersActiveIcon />}
-          title="Are Following"
+          title="Following"
         />
         <MenuItems
           to={config.routers.Discovery}
           icon={<DiscoveryIcon />}
           activeIcon={<DiscoveryActiveIcon />}
-          title="Discover "
+          title="Explore "
         />
         <MenuItems
           to={config.routers.Live}

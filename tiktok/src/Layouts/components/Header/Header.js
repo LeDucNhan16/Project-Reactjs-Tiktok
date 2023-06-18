@@ -166,11 +166,11 @@ const MENU_ITEMS = [
   },
   {
     icon: <HelpFeedbackIcon />,
-    title: "Phản hồi và trợ giúp",
+    title: "Feedback and help",
   },
   {
     icon: <KeyboardShortcutsIcon />,
-    title: "Phím tắt trên bàn phím",
+    title: "Keyboard shortcuts",
     children: {
       title: "Quay lại",
       data: [
@@ -199,7 +199,7 @@ const MENU_ITEMS = [
   },
   {
     icon: <LightDarkModeIcon />,
-    title: "Chế độ tối",
+    title: "Dark mode",
   },
 ];
 
@@ -207,16 +207,16 @@ function Header() {
   const MENU_ITEMS_LOGIN = [
     {
       icon: <ViewProfileIcon />,
-      title: "Xem hồ sơ",
+      title: "View profile",
     },
     {
       icon: <CoinIcon />,
-      title: "Nhận xu",
+      title: "Get Coins",
       to: "/upload",
     },
     {
       icon: <SettingIcon />,
-      title: "Cài đặt",
+      title: "Settings",
     },
     ...MENU_ITEMS,
   ];
