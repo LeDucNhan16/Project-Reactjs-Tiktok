@@ -1,7 +1,11 @@
 .wrapper {
   width: 240px;
-  overflow-y: auto;
+  overflow: hidden;
   max-height: min(100vh);
+
+  &:hover {
+    overflow-y: auto;
+  }
 }
 
 .search_title {

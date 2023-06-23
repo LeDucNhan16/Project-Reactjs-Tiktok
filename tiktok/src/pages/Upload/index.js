@@ -3,6 +3,7 @@ import styles from "./Upload.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Button from "../../components/Button/Button";
+import Image from "../../Image/Image";
 
 const cx = classNames.bind(styles);
 
@@ -17,7 +18,7 @@ function Upload() {
       </div>
       <div className={cx("use_coin")}>
         <div className={cx("use_block")}>
-          <img
+          <Image
             className={cx("use_avatar")}
             src="https://tse1.mm.bing.net/th?id=OIP.TEeZO0--ukKoHkzxLulw-gHaE8&amp;pid=Api&amp;P=0"
             alt="avatar"
@@ -341,46 +342,46 @@ function Upload() {
       </div>
       <div className={cx("payment_methods")}>
         <p>Phương thức thanh toán </p>
-        <img
+        <Image
           src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/momo_4256e5.png"
           data-e2e="wallet-payment-icon-MOMO"
           className={cx("avatar_pay")}
         />
-        <img
+        <Image
           src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/zalopay-icon_e8534b.svg"
           data-e2e="wallet-payment-icon-ZALOPAY"
           className={cx("avatar_pay")}
         />
-        <img
+        <Image
           src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/visa_light_c558fb.svg"
           data-e2e="wallet-payment-icon-VISA"
           className={cx("avatar_pay")}
         />
-        <img
+        <Image
           src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/mastercard-gray-update_7b3ceb.svg"
           data-e2e="wallet-payment-icon-MASTER"
           className={cx("avatar_pay")}
         />
-        <img
+        <Image
           src="https://lf16-co.g-p-static.com/obj/pipo-sg/sky/card_american_express_v1_429e0f.svg"
           data-e2e="wallet-payment-icon-AMEX"
           className={cx("avatar_pay")}
-        ></img>
-        <img
+        ></Image>
+        <Image
           src="https://lf16-co.g-p-static.com/obj/pipo-sg/sky/discover_5ec158.svg"
           data-e2e="wallet-payment-icon-DISCOVER"
           className={cx("avatar_pay")}
-        ></img>
-        <img
+        ></Image>
+        <Image
           src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/2c2p-border_2ec2d6.png"
           data-e2e="wallet-payment-icon-BANK_TRANSFER"
           className={cx("avatar_pay")}
-        ></img>
-        <img
+        ></Image>
+        <Image
           src="https://lf16-co.g-p-static.com/obj/pipo-sg/sky/diners_a3de24.svg"
           data-e2e="wallet-payment-icon-DINERS"
           className={cx("avatar_pay")}
-        ></img>
+        ></Image>
       </div>
       <div className={cx("result")}>
         Tổng
