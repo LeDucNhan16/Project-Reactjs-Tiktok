@@ -11,7 +11,7 @@ import {
 import Image from "../../Image/Image";
 import styles from "./Context.module.scss";
 import Button from "../Button/Button";
-import { useState } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 
 const cx = classNames.bind(styles);
 
@@ -34,6 +34,61 @@ function Context({
   const [heart, setHeart] = useState(true);
   const [book, setBook] = useState(false);
   const [follow, setFollow] = useState(true);
+  const [playing, setPlaying] = useState(false);
+
+  const videoRef = useRef();
+
+  const useElementOnScreen = (options, targetRef) => {
+    const [isVisible, setIsVisible] = useState();
+    const callbackFunction = (entries) => {
+      const [entry] = entries; //const entry = entries[0]
+      setIsVisible(entry.isIntersecting);
+    };
+    const optionsMemo = useMemo(() => {
+      return options;
+    }, [options]);
+    useEffect(() => {
+      const observer = new IntersectionObserver(callbackFunction, optionsMemo);
+      const currentTarget = targetRef.current;
+      if (currentTarget) observer.observe(currentTarget);
+
+      return () => {
+        if (currentTarget) observer.unobserve(currentTarget);
+      };
+    }, [targetRef, optionsMemo]);
+    return isVisible;
+  };
+
+  const handleVideo = () => {
+    if (playing) {
+      videoRef.current.pause();
+      setPlaying(false);
+    } else {
+      videoRef.current.play();
+      setPlaying(true);
+    }
+  };
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  };
+  const isVisible = useElementOnScreen(options, videoRef);
+
+  useEffect(() => {
+    if (isVisible) {
+      if (!playing) {
+        videoRef.current.play();
+        setPlaying(true);
+      }
+    } else {
+      if (playing) {
+        videoRef.current.pause();
+        setPlaying(false);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isVisible]);
 
   return (
     <div className={cx("wrapper")}>
@@ -66,8 +121,14 @@ function Context({
               </button>
             )}
           </div>
+
           <div className={cx("video__main")}>
-            <video controls className={cx("video__main__video")}>
+            <video
+              ref={videoRef}
+              controls
+              onClick={handleVideo}
+              className={cx("video__main__video")}
+            >
               <source src={srcVideo} />
             </video>
             <div className={cx("video__main__navigation")}>
