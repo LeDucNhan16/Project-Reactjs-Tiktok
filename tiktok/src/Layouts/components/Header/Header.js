@@ -167,6 +167,7 @@ const MENU_ITEMS = [
   {
     icon: <HelpFeedbackIcon />,
     title: "Feedback and help",
+    to: "https://www.tiktok.com/feedback",
   },
   {
     icon: <KeyboardShortcutsIcon />,
@@ -208,15 +209,17 @@ function Header() {
     {
       icon: <ViewProfileIcon />,
       title: "View profile",
+      to: config.routers.Profile,
     },
     {
       icon: <CoinIcon />,
       title: "Get Coins",
-      to: "/upload",
+      to: config.routers.Coin,
     },
     {
       icon: <SettingIcon />,
       title: "Settings",
+      to: config.routers.Setting,
     },
     ...MENU_ITEMS,
   ];
@@ -305,24 +308,29 @@ function Header() {
 
         {/* Actions Header */}
         <div className={cx("actions")}>
-          <Button iconItem={<FontAwesomeIcon icon={faPlus} />} small>
-            Tải lên
+          <Button
+            className={cx("upload__btn")}
+            iconItem={<FontAwesomeIcon icon={faPlus} />}
+            small
+            to={config.routers.Upload}
+          >
+            Upload
           </Button>
           {currentResult ? (
             <>
               <Tippy
                 delay={[0, 200]}
-                content="Tin nhắn"
+                content="Message"
                 placement="bottom"
                 hideOnClick={false}
               >
-                <button className={cx("login_btn")}>
+                <Button to={config.routers.Message} className={cx("login_btn")}>
                   <MessageIcon />
-                </button>
+                </Button>
               </Tippy>
               <Tippy
                 delay={[0, 200]}
-                content="Thông báo"
+                content="Notification"
                 placement="bottom"
                 hideOnClick={false}
               >
@@ -332,7 +340,7 @@ function Header() {
               </Tippy>
             </>
           ) : (
-            <Button primary>Đăng nhập</Button>
+            <Button primary>Log in</Button>
           )}
 
           {currentResult ? (

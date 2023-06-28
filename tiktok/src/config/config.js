@@ -6,6 +6,9 @@ const routers = {
   Live: "/live",
   Search: "/search",
   Upload: "/upload",
+  Coin: "/coin",
+  Setting: "/setting",
+  Message: "/message",
 };
 
 export default routers;

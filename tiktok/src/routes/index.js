@@ -7,6 +7,9 @@ import Profile from "../pages/Profile/index.js";
 import Upload from "../pages/Upload/index.js";
 import Search from "../pages/Search/index.js";
 import Discovery from "../pages/Discovery";
+import Coin from "../pages/Coin";
+import Setting from "../pages/Setting";
+import Message from "../pages/Message";
 
 //
 const publicRoutes = [
@@ -17,6 +20,17 @@ const publicRoutes = [
   { path: config.routers.Profile, component: Profile },
   { path: config.routers.Search, component: Search, layout: null },
   { path: config.routers.Upload, component: Upload, layout: HeaderOnly },
+  { path: config.routers.Coin, component: Coin, layout: HeaderOnly },
+  {
+    path: config.routers.Setting,
+    component: Setting,
+    layout: HeaderOnly,
+  },
+  {
+    path: config.routers.Message,
+    component: Message,
+    layout: HeaderOnly,
+  },
 ];
 
 const privateRoutes = [];

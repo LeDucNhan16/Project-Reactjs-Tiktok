@@ -1,146 +1,169 @@
 .wrapper {
-  width: 1140px;
-  padding: 55px 24px;
-}
-
-.coin_cents {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-}
-
-.coin_subcents {
-  font-size: 2rem;
-}
-
-.coin_history {
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 30px;
-}
-
-.use_coin {
-  width: 400px;
-  height: 76px;
-  margin-top: 20px;
-  background-color: rgba(22, 24, 35, 0.03);
-  display: flex;
+  background-color: rgb(248, 248, 248);
+  flex-direction: column;
   align-items: center;
+  overflow-y: auto;
+  max-height: min(100vh - 60px);
 
-  .use_block {
+  .main {
+    width: 1100px;
+    height: 600px;
+    margin: 25px 0 40px;
+    padding: 64px 50px;
+    border-radius: 8px;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    background-color: rgb(255, 255, 255);
 
-    .use_avatar {
-      width: 32px;
-      height: 32px;
-      margin: 0 0 0 10px;
-      border-radius: 999px;
-      background-color: transparent;
+    .main__block {
+      min-width: 100px;
+      min-height: 460px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      border: 2px dashed #ddd;
+      border-radius: 10px;
       cursor: pointer;
-    }
-    .use_name {
-      padding: 0 20px 0 10px;
-    }
-    .use_subcents {
-      padding-left: 20px;
-      border-left: 1px solid rgba(22, 24, 35, 0.3);
-      color: rgba(22, 24, 35, 0.5);
 
-      .use_chevronright {
-        padding: 0 10px;
-        margin-bottom: -1px;
+      &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
       }
-      .show_coin {
-        cursor: pointer;
-      }
-    }
-  }
-  .avatar_coin {
-    margin-bottom: -2px;
-  }
-}
 
-.load_coin {
-  display: flex;
-  margin: 20px 0;
-
-  .load_coin_colored {
-    margin-left: 5px;
-    color: var(--red);
-  }
-
-  .load_coin_icon {
-    color: rgba(22, 24, 35, 0.5);
-    margin: 4px 0 0 3px;
-  }
-}
-
-.coin_list {
-  .coin_list_btn {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    & + .coin_list_btn {
-      margin-top: 20px;
-    }
-
-    .block_btn {
-      min-width: 230px;
-      height: 96px;
-      border-radius: 4px;
-      background-color: transparent;
-      cursor: pointer;
-      border: 1px solid rgba(22, 24, 35, 0.2);
-
-      & + .block_btn {
+      .icon__upload {
+        font-size: 32px;
         margin-bottom: 20px;
+        opacity: 0.6;
       }
 
-      &:first-child {
-        border: 1px solid rgb(231, 217, 60);
+      h3 {
+        display: flex;
+        justify-content: center;
       }
 
-      .block_btn_loadcents {
-        font-size: 2.2rem;
-        font-weight: 700;
-        padding-bottom: 10px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0.7;
 
-        span {
-          padding-left: 5px;
+        li {
+          padding: 5px 0;
+          font-size: 1.5rem;
         }
       }
 
-      p {
-        color: rgba(22, 24, 35, 0.5);
+      .selectFile__btn {
+        text-decoration: none;
+        height: 36px;
+        overflow: hidden;
+        margin: 20px 300px;
+        color: var(--white);
+        background-color: var(--primary);
+        font-size: 1.6rem;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #ea284e;
+        }
+      }
+    }
+  }
+  .footer {
+    width: 100%;
+    background-color: #000;
+    min-height: 400px;
+    padding: 40px 150px;
+
+    .footer__head {
+      display: flex;
+
+      img {
+        height: 34px;
+        margin-top: 10px;
+      }
+
+      .interact {
+        display: flex;
+        margin: 0 50px;
+
+        .interact__items {
+          color: var(--white);
+          width: 225px;
+
+          h4 {
+            line-height: 40px;
+          }
+          a {
+            color: var(--white);
+            opacity: 0.8;
+            line-height: 35px;
+            font-size: 1.4rem;
+
+            &:hover {
+              border-bottom: 2px solid var(--white);
+            }
+          }
+        }
+      }
+    }
+
+    .footer__end {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+
+      .footer__end__btn {
+        font-size: 1.6rem;
+        padding: 5px 10px;
+        cursor: pointer;
+        border: 0.5px solid #ccc;
+        background-color: #000;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 150px;
+
+        div#tippy-8 {
+          display: none;
+        }
+
+        &:hover {
+          div#tippy-8 {
+            display: flex;
+          }
+        }
       }
     }
   }
 }
 
-.payment_methods {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  font-weight: 200;
+// Tippy
 
-  p {
-    padding-right: 3px;
-  }
-  .avatar_pay {
-    width: 22px;
-    height: 14px;
-    display: inline-block;
-    margin-right: 4px;
-    cursor: pointer;
-  }
-}
+.block {
+  background-color: white;
+  border: 1px solid #898585;
 
-.result {
-  margin-bottom: 20px;
-  span {
-    font-weight: 700;
-    padding-left: 10px;
+  .language__items {
+    max-height: min(100vh);
+    overflow-y: auto;
+    height: 600px;
+    border: 1px solid #959595;
+
+    li {
+      padding: 5px 10px;
+      cursor: context-menu;
+
+      &:hover {
+        background-color: #0ecff0;
+        color: var(--white);
+      }
+    }
   }
 }
