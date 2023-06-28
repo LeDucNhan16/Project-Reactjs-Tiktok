@@ -6,7 +6,12 @@ import Video1 from "../../assets/Video/3720204937674537429.mp4";
 import Video2 from "../../assets/Video/4459531380904.mp4";
 import Video3 from "../../assets/Video/4459531386389.mp4";
 import Video4 from "../../assets/Video/4459531393531.mp4";
-import Video5 from "../../assets/Video/4459531394711.mp4";
+import Video5 from "../../assets/Video/4471971206435.mp4";
+import Video6 from "../../assets/Video/4471971206266.mp4";
+import Video7 from "../../assets/Video/4471971205735.mp4";
+import Video8 from "../../assets/Video/4471971205051.mp4";
+import Video9 from "../../assets/Video/4471971204510.mp4";
+import Video10 from "../../assets/Video/4471971202862.mp4";
 
 const cx = classNames.bind(styles);
 
@@ -21,8 +26,8 @@ function Home() {
         titleId="#xuhuong"
         titleMusic="Cô nàng AI"
         srcVideo={Video1}
-        title__active__HeartIcon="2002"
-        title__HeartIcon="2001"
+        title__active__HeartIcon="202"
+        title__HeartIcon="201"
         title__CommentIcon="1324"
         title__bookMarkIcon="295"
         title__bookMarkIcon__active="294"
@@ -54,7 +59,7 @@ function Home() {
         titleMusic="Vương yêu tiktok rất nhiều - Vương thế thôi"
         srcVideo={Video3}
         title__active__HeartIcon="1111"
-        title__HeartIcon="1112"
+        title__HeartIcon="1110"
         title__CommentIcon="132"
         title__bookMarkIcon="3320"
         title__bookMarkIcon__active="3221"
@@ -78,6 +83,22 @@ function Home() {
         btn__Following={true}
       />
       <Context
+        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/d6c61413a00b4d2e36e62c24d377d1ba~c5_100x100.jpeg?x-expires=1687690800&x-signature=iaRYSW%2FX2R20SkwLPUOkGqDQft0%3D"
+        nameMain="choinghigiaan"
+        nameSub="Chòi nghỉ sân vườn"
+        titleMain="Mái nhôm cuốn sang trọng giá bằng nửa tháng lương "
+        titleId="#phuthep6688"
+        titleMusic="Vua Lồng Tiếng"
+        srcVideo={Video5}
+        title__active__HeartIcon="1216"
+        title__HeartIcon="1215"
+        title__CommentIcon="91"
+        title__bookMarkIcon="431"
+        title__bookMarkIcon__active="432"
+        title__shareIcon="32"
+        btn__Following={true}
+      />
+      <Context
         className="video"
         srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/8420ce3522c89eb4772ef05941411498~c5_100x100.jpeg?x-expires=1687687200&x-signature=eleHEW1VpbxN8BDfRtqSm%2FxlamQ%3D"
         nameMain="zahu1a"
@@ -85,7 +106,7 @@ function Home() {
         titleMain="Hey Siri~~~"
         titleId="#xuhuong"
         titleMusic="Cô nàng AI"
-        srcVideo={Video1}
+        srcVideo={Video6}
         title__active__HeartIcon="2002"
         title__HeartIcon="2001"
         title__CommentIcon="1324"
@@ -101,9 +122,9 @@ function Home() {
         titleMain="Hey Siri~~~"
         titleId="#xuhuong"
         titleMusic="Cô nàng AI"
-        srcVideo={Video2}
-        title__active__HeartIcon="2002"
-        title__HeartIcon="2001"
+        srcVideo={Video7}
+        title__active__HeartIcon="935"
+        title__HeartIcon="934"
         title__CommentIcon="1324"
         title__bookMarkIcon="295"
         title__bookMarkIcon__active="294"
@@ -117,9 +138,9 @@ function Home() {
         titleMain="Hey Siri~~~"
         titleId="#xuhuong"
         titleMusic="Cô nàng AI"
-        srcVideo={Video3}
-        title__active__HeartIcon="2002"
-        title__HeartIcon="2001"
+        srcVideo={Video8}
+        title__active__HeartIcon="999"
+        title__HeartIcon="998"
         title__CommentIcon="1324"
         title__bookMarkIcon="295"
         title__bookMarkIcon__active="294"
@@ -133,7 +154,7 @@ function Home() {
         titleMain="Hey Siri~~~"
         titleId="#xuhuong"
         titleMusic="Cô nàng AI"
-        srcVideo={Video4}
+        srcVideo={Video9}
         title__active__HeartIcon="2002"
         title__HeartIcon="2001"
         title__CommentIcon="1324"
@@ -149,9 +170,9 @@ function Home() {
         titleMain="Hey Siri~~~"
         titleId="#xuhuongTrend"
         titleMusic="Cô nàng AI"
-        srcVideo={Video5}
-        title__active__HeartIcon="2002"
-        title__HeartIcon="2001"
+        srcVideo={Video10}
+        title__active__HeartIcon="202"
+        title__HeartIcon="201"
         title__CommentIcon="1324"
         title__bookMarkIcon="295"
         title__bookMarkIcon__active="294"

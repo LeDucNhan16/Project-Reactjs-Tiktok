@@ -85,16 +85,9 @@ function Search() {
           {!!searchValue && searchLoading && (
             <FontAwesomeIcon className={cx("loading")} icon={faSpinner} />
           )}
-          <Tippy
-            delay={[0, 200]}
-            content="Tìm kiếm"
-            placement="bottom"
-            hideOnClick={false}
-          >
-            <button className={cx("search_btn")}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </button>
-          </Tippy>
+          <button className={cx("search_btn")}>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
         </div>
       </HeadLessTippy>
     </div>

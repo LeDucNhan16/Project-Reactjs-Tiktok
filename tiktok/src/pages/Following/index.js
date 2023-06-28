@@ -7,6 +7,11 @@ import Video2 from "../../assets/Video/4459556760151.mp4";
 import Video3 from "../../assets/Video/4459552994307.mp4";
 import Video4 from "../../assets/Video/4459552988012.mp4";
 import Video5 from "../../assets/Video/4459531394711.mp4";
+import Video6 from "../../assets/Video/4471971200906.mp4";
+import Video7 from "../../assets/Video/4471971202862.mp4";
+import Video8 from "../../assets/Video/4471971205051.mp4";
+import Video9 from "../../assets/Video/4471971203548.mp4";
+import Video10 from "../../assets/Video/4471971204060.mp4";
 
 const cx = classNames.bind(styles);
 
@@ -100,7 +105,7 @@ function Following() {
         titleMain="Hey Siri~~~"
         titleId="#xuhuong"
         titleMusic="Cô nàng AI"
-        srcVideo={Video1}
+        srcVideo={Video6}
         title__active__HeartIcon="2002"
         title__HeartIcon="2001"
         title__CommentIcon="1324"
@@ -116,7 +121,7 @@ function Following() {
         titleMain="Trong 12 con giáp rồng được ví như 1 vị vua thầm lặng "
         titleId="#phuthep6688"
         titleMusic="Phú Thép 🐲"
-        srcVideo={Video2}
+        srcVideo={Video7}
         title__active__HeartIcon="19.101"
         title__HeartIcon="19.100"
         title__CommentIcon="91"
@@ -132,7 +137,7 @@ function Following() {
         titleMain="TCũng báo lắm nha😂"
         titleId="@  Vương yêu tiktok rất nhiều - Vương thế thôi"
         titleMusic="Vương yêu tiktok rất nhiều - Vương thế thôi"
-        srcVideo={Video3}
+        srcVideo={Video8}
         title__active__HeartIcon="1111"
         title__HeartIcon="1112"
         title__CommentIcon="132"
@@ -148,7 +153,7 @@ function Following() {
         titleMain="Mái nhôm cuốn sang trọng giá bằng nửa tháng lương "
         titleId="#phuthep6688"
         titleMusic="Vua Lồng Tiếng"
-        srcVideo={Video4}
+        srcVideo={Video9}
         title__active__HeartIcon="1216"
         title__HeartIcon="1215"
         title__CommentIcon="91"
@@ -164,7 +169,7 @@ function Following() {
         titleMain="Trong 12 con giáp rồng được ví như 1 vị vua thầm lặng  Vụ đánh ghen ở Trung Văn Hà Nội, đập nát kính ô tô, yêu mí ông bà ghê, vừa cản chị vợ vừa đưa bao tay, mũ bảo hiểm cho chị ấy "
         titleId="#phuthep6688"
         titleMusic="Sangvo34563"
-        srcVideo={Video5}
+        srcVideo={Video10}
         title__active__HeartIcon="18"
         title__HeartIcon="19"
         title__CommentIcon="12"
