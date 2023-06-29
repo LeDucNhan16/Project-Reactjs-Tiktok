@@ -8,7 +8,7 @@ import {
   faM,
 } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames/bind";
-import Tippy from "@tippyjs/react";
+import Tippy from "@tippyjs/react/headless";
 import "tippy.js/dist/tippy.css";
 import { Link } from "react-router-dom";
 
@@ -29,6 +29,7 @@ import {
 import Search from "./Search/Search";
 import config from "../../../config";
 import Image from "../../../Image/Image";
+import Notification from "./NotificationHeader";
 
 const cx = classNames.bind(styles);
 
@@ -329,10 +330,15 @@ function Header() {
                 </Button>
               </Tippy>
               <Tippy
-                delay={[0, 200]}
-                content="Notification"
+                delay={[100, 500]}
                 placement="bottom"
                 hideOnClick={false}
+                interactive
+                render={(attrs) => (
+                  <div className={cx("menu_list")} tabIndex="-1" {...attrs}>
+                    <Notification />
+                  </div>
+                )}
               >
                 <button className={cx("login_btn")}>
                   <NotificationIcon />
