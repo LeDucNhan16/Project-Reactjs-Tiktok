@@ -7,11 +7,13 @@ import {
   faHeart,
   faShare,
 } from "@fortawesome/free-solid-svg-icons";
+import Tippy from "@tippyjs/react/headless";
 
 import Image from "../../Image/Image";
 import styles from "./Context.module.scss";
 import Button from "../Button/Button";
 import { useState, useEffect, useRef, useMemo } from "react";
+import ShareInformation from "../ShareInformation/ShareInformation";
 
 const cx = classNames.bind(styles);
 
@@ -195,14 +197,29 @@ function Context({
                     </div>
                   )}
                 </button>
-                <button className={cx("block")}>
-                  <div className={cx("block__icon")}>
-                    <div className={cx("block__icon__btn")}>
-                      <FontAwesomeIcon className={cx("icon")} icon={faShare} />
+                <Tippy
+                  hideOnClick={false}
+                  interactive
+                  delay={[0, 500]}
+                  placement="top-start"
+                  render={(attrs) => (
+                    <div className={cx("menu_list")} tabIndex="-1" {...attrs}>
+                      <ShareInformation />
                     </div>
-                    <span>{title__shareIcon}</span>
-                  </div>
-                </button>
+                  )}
+                >
+                  <button className={cx("block")}>
+                    <div className={cx("block__icon")}>
+                      <div className={cx("block__icon__btn")}>
+                        <FontAwesomeIcon
+                          className={cx("icon")}
+                          icon={faShare}
+                        />
+                      </div>
+                      <span>{title__shareIcon}</span>
+                    </div>
+                  </button>
+                </Tippy>
               </div>
             </div>
           </div>

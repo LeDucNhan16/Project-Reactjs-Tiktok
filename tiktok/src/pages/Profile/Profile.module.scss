@@ -1,5 +1,6 @@
 .wrapper {
   padding: 25px 0 0 25px;
+  display: grid;
 
   .head {
     width: 625px;
@@ -7,6 +8,7 @@
 
     .id__name {
       display: flex;
+      width: 100%;
 
       .img {
         width: 115px;
@@ -18,6 +20,7 @@
       .title {
         display: flex;
         flex-direction: column;
+        flex: 10;
 
         h1 {
           font-weight: 900;
@@ -28,24 +31,29 @@
         }
 
         .title__btn {
-          border: 1px solid rgba(22, 24, 35, 0.12);
-          border-radius: 5px;
-          background-color: rgb(255, 255, 255);
-          font-weight: 600;
-          justify-content: center;
-          cursor: pointer;
           height: 36px;
           padding: 0px 10px;
           line-height: 24px;
           margin-top: 15px;
           width: 140px;
           font-size: 16px;
+          font-weight: 600;
+          border-radius: 5px;
+          border: 1px solid rgba(22, 24, 35, 0.12);
+          background-color: rgb(255, 255, 255);
+          justify-content: center;
+          cursor: pointer;
 
           &:hover {
             border-color: rgb(208, 209, 211);
             background-color: rgb(248, 248, 248);
           }
         }
+      }
+      .arrow__icon__btn {
+        background-color: transparent;
+        height: 55px;
+        cursor: pointer;
       }
     }
     .id__Name__Sub {
@@ -70,17 +78,137 @@
     .nav__items {
       padding: 5px 15px;
       line-height: 46px;
+      border-bottom: 2px solid white;
       cursor: pointer;
       transition: transform 0.3s ease 0s;
       transform: translateX(0px);
-      border-bottom: 2px solid white;
 
+      &:focus,
       &:hover {
         border-bottom: 2px solid #333;
       }
 
       .nav__items__icon {
         margin-bottom: -2px;
+      }
+    }
+  }
+
+  .block {
+    top: 30px;
+    right: -630px;
+    width: 100%;
+    height: 100%;
+    outline: 0px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+
+    .block__profile {
+      width: 700px;
+      border-radius: 8px;
+      background: rgb(255, 255, 255);
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
+
+      .head__profile__setting {
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+          font-size: 25px;
+        }
+
+        button {
+          background-color: transparent;
+        }
+
+        .icon__delete {
+          cursor: pointer;
+        }
+      }
+
+      .body__profile__setting {
+        padding: 20px 20px 0 20px;
+        max-height: min(100vh);
+        overflow-x: auto;
+
+        .context {
+          padding-bottom: 20px;
+          padding-top: 20px;
+          border-bottom: 1px solid #ddd;
+          display: flex;
+          flex-direction: inherit;
+
+          &:last-child {
+            border: none;
+          }
+
+          h4 {
+            width: 150px;
+          }
+
+          .context__img {
+            width: 96px;
+            height: 96px;
+            margin-left: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+          }
+
+          .context__sub {
+            flex: 1;
+
+            .input__username {
+              width: 360px;
+              height: 38px;
+              line-height: 24px;
+              padding: 7px 12px;
+              border-radius: 4px;
+              font-size: 16px;
+              background-color: rgba(22, 24, 35, 0.06);
+              caret-color: rgb(254, 44, 85);
+              color: rgb(22, 24, 35);
+              outline: none;
+              border: none;
+            }
+            span {
+              opacity: 0.7;
+              font-size: 13px;
+              margin-top: 15px;
+              display: flex;
+            }
+
+            .input__bio {
+              width: 360px;
+              border-radius: 4px;
+              height: 100px;
+              padding: 12px;
+              font-size: 16px;
+              line-height: 24px;
+              background: rgba(22, 24, 35, 0.06);
+              caret-color: rgb(254, 44, 85);
+              color: rgb(22, 24, 35);
+              outline: none;
+              border: none;
+              resize: none;
+            }
+          }
+        }
+      }
+
+      .block__btn {
+        border-top: 1px solid #ddd;
+        padding: 20px;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          padding: 5px;
+          border-radius: 6px;
+        }
       }
     }
   }
@@ -93,8 +221,8 @@
 
   .icon__your {
     margin-top: 250px;
-    opacity: 0.6;
     margin-bottom: 10px;
+    opacity: 0.6;
   }
 }
 
