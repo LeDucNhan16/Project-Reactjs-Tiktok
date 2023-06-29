@@ -332,8 +332,8 @@ function Header() {
               <Tippy
                 delay={[100, 500]}
                 placement="bottom"
-                hideOnClick={false}
                 interactive
+                hideOnClick={false}
                 render={(attrs) => (
                   <div className={cx("menu_list")} tabIndex="-1" {...attrs}>
                     <Notification />

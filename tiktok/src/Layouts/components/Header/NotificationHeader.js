@@ -452,7 +452,7 @@ function Notification() {
                   <span className={cx("title__sub")}>Follows you . 2-6</span>
                 </div>
               </div>
-              <Button primaryRed>Follow backs.</Button>
+              <Button primaryRed>Follow back</Button>
             </div>
           </div>
         </TabPanel>
