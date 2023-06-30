@@ -21,8 +21,10 @@ const cx = classNames.bind(styles);
 
 function Coin() {
   const [showHistory, setShowHistory] = useState(false);
-  const [coinDepositTerms, setcoinDepositTerms] = useState(false);
-  const [showRecharge, setMountshowRecharge] = useState(false);
+  const [coinDepositTerms, setDepositTerms] = useState(false);
+  const [showRecharge, setRecharge] = useState(false);
+  const [showMomo, setShowMomo] = useState(false);
+  const [showCard, setShowCard] = useState(false);
 
   const handleMountShowHistory = () => {
     setShowHistory(false);
@@ -31,13 +33,26 @@ function Coin() {
     setShowHistory(true);
   };
   const handleShowcoinDepositTerms = () => {
-    setcoinDepositTerms(true);
+    setDepositTerms(true);
   };
   const handleShowRecharge = () => {
-    setMountshowRecharge(true);
+    setRecharge(true);
   };
   const handleMountRecharge = () => {
-    setMountshowRecharge(false);
+    setRecharge(false);
+  };
+
+  const handleShowMomo = () => {
+    setShowCard(false);
+    setShowMomo(true);
+  };
+  const handleShowCard = () => {
+    setShowMomo(false);
+    setShowCard(true);
+  };
+  const handleMountCardandMomo = () => {
+    setShowCard(false);
+    setShowMomo(false);
   };
   return (
     <>
@@ -491,75 +506,144 @@ function Coin() {
               </div>
               <form>
                 <div className={cx("selects")}>
-                  <div className={cx("select__name")}>
-                    <input type="radio" id="huey" name="drone" value="huey" />
-                    <label for="huey">MoMo</label>
+                  <div className={cx("name")}>
+                    <div
+                      onClick={handleShowMomo}
+                      className={cx("select__name")}
+                    >
+                      <input type="radio" id="huey" name="drone" value="huey" />
+                      <label for="huey">MoMo</label>
+                    </div>
+                    <div className={cx("select__img")}>
+                      <Image
+                        className={cx("select__img__list")}
+                        alt="img"
+                        src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/momogrey_c80680.png"
+                      />
+                    </div>
                   </div>
-                  <div className={cx("select__img")}>
-                    <Image
-                      className={cx("select__img__list")}
-                      alt="img"
-                      src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/momogrey_c80680.png"
-                    />
+                  {showMomo && (
+                    <div className={cx("select__context")}>
+                      <Image src="https://lf16-co.g-p-static.com/obj/pipo-sg/checkout_card/svg/paypal-extral.svg" />
+                      <p>Link your account first</p>
+                      <p>
+                        We’ll save your payment method securely for future use.
+                      </p>
+                      <Button largePay>Link now</Button>
+                    </div>
+                  )}
+                </div>
+                <div className={cx("selects")}>
+                  <div onClick={handleMountCardandMomo} className={cx("name")}>
+                    <div className={cx("select__name")}>
+                      <input
+                        type="radio"
+                        id="dewey"
+                        name="drone"
+                        value="dewey"
+                      />
+                      <label for="dewey">ZaloPay</label>
+                    </div>
+                    <div className={cx("select__img")}>
+                      <Image
+                        className={cx("select__img__list")}
+                        alt="img"
+                        src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/zalopay-gray_0818a4.svg"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className={cx("selects")}>
-                  <div className={cx("select__name")}>
-                    <input type="radio" id="dewey" name="drone" value="dewey" />
-                    <label for="dewey">ZaloPay</label>
+                  <div className={cx("name")}>
+                    <div
+                      onClick={handleShowCard}
+                      className={cx("select__name")}
+                    >
+                      <input
+                        type="radio"
+                        id="louie"
+                        name="drone"
+                        value="louie"
+                      />
+                      <label for="louie">Credit / debit card</label>
+                    </div>
+                    <div className={cx("select__img")}>
+                      <Image
+                        className={cx("select__img__list")}
+                        alt="img"
+                        src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/visa_light_c558fb.svg"
+                      />
+                      <Image
+                        className={cx("select__img__list")}
+                        alt="img"
+                        src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/mastercard-gray-update_7b3ceb.svg"
+                      />
+                      <Image
+                        className={cx("select__img__list")}
+                        alt="img"
+                        src="https://lf16-co.g-p-static.com/obj/pipo-sg/sky/card_american_express_v1_429e0f.svg"
+                      />
+                      <Image
+                        className={cx("select__img__list")}
+                        alt="img"
+                        src="https://lf16-co.g-p-static.com/obj/pipo-sg/sky/diners_a3de24.svg"
+                      />
+                      <Image
+                        className={cx("select__img__list")}
+                        alt="img"
+                        src="https://lf16-co.g-p-static.com/obj/pipo-sg/sky/discover_5ec158.svg"
+                      />
+                    </div>
                   </div>
-                  <div className={cx("select__img")}>
-                    <Image
-                      className={cx("select__img__list")}
-                      alt="img"
-                      src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/zalopay-gray_0818a4.svg"
-                    />
-                  </div>
+                  {showCard && (
+                    <div className={cx("context__card")}>
+                      <div className={cx("context__card__items")}>
+                        <div className={cx("list")}>
+                          <h4>Card number</h4>
+                          <input placeholder="1234 4213 2134 2134" />
+                        </div>
+                        <div className={cx("list")}>
+                          <h4>Card number</h4>
+                          <input placeholder="1234 4213 2134 2134" />
+                        </div>
+                      </div>
+                      <div className={cx("context__card__items")}>
+                        <div className={cx("list")}>
+                          <h4>Card number</h4>
+                          <input placeholder="1234 4213 2134 2134" />
+                        </div>
+                        <div className={cx("list")}>
+                          <h4>Card number</h4>
+                          <input placeholder="1234 4213 2134 2134" />
+                        </div>
+                      </div>
+                      <div className={cx("context__card__tick")}>
+                        <input id="checkbox" value="checkbox" type="checkbox" />
+                        <label for="checkbox">
+                          Save the information for future use
+                        </label>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div className={cx("selects")}>
-                  <div className={cx("select__name")}>
-                    <input type="radio" id="louie" name="drone" value="louie" />
-                    <label for="louie">Credit / debit card</label>
-                  </div>
-                  <div className={cx("select__img")}>
-                    <Image
-                      className={cx("select__img__list")}
-                      alt="img"
-                      src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/visa_light_c558fb.svg"
-                    />
-                    <Image
-                      className={cx("select__img__list")}
-                      alt="img"
-                      src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/mastercard-gray-update_7b3ceb.svg"
-                    />
-                    <Image
-                      className={cx("select__img__list")}
-                      alt="img"
-                      src="https://lf16-co.g-p-static.com/obj/pipo-sg/sky/card_american_express_v1_429e0f.svg"
-                    />
-                    <Image
-                      className={cx("select__img__list")}
-                      alt="img"
-                      src="https://lf16-co.g-p-static.com/obj/pipo-sg/sky/diners_a3de24.svg"
-                    />
-                    <Image
-                      className={cx("select__img__list")}
-                      alt="img"
-                      src="https://lf16-co.g-p-static.com/obj/pipo-sg/sky/discover_5ec158.svg"
-                    />
-                  </div>
-                </div>
-                <div className={cx("selects")}>
-                  <div className={cx("select__name")}>
-                    <input type="radio" id="bank" name="drone" value="dewey" />
-                    <label for="bank">Bank transfer</label>
-                  </div>
-                  <div className={cx("select__img")}>
-                    <Image
-                      className={cx("select__img__list")}
-                      alt="img"
-                      src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/2c2p_629df5.png"
-                    />
+                  <div onClick={handleMountCardandMomo} className={cx("name")}>
+                    <div className={cx("select__name")}>
+                      <input
+                        type="radio"
+                        id="bank"
+                        name="drone"
+                        value="dewey"
+                      />
+                      <label for="bank">Bank transfer</label>
+                    </div>
+                    <div className={cx("select__img")}>
+                      <Image
+                        className={cx("select__img__list")}
+                        alt="img"
+                        src="https://lf16-co.g-p-static.com/obj/pipo-sgcompliance/sky/2c2p_629df5.png"
+                      />
+                    </div>
                   </div>
                 </div>
               </form>
@@ -587,7 +671,9 @@ function Coin() {
                 <button className={cx("btn__item")}>
                   <QuestionMarkIcon />
                 </button>
-                <Button largePay>Pay new</Button>
+                <Button onClick={handleMountRecharge} largePay>
+                  Pay new
+                </Button>
               </div>
             </div>
           </div>

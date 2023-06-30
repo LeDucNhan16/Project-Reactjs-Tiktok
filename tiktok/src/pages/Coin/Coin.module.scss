@@ -342,15 +342,85 @@ button {
         margin-top: -1px;
         margin-bottom: 20px;
         cursor: pointer;
+        flex-direction: column;
 
-        .select__name {
-          padding: 20px;
+        .name {
           display: flex;
-          flex: 1;
+          justify-content: space-between;
 
-          label {
-            margin-top: -3px;
+          .select__name {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+          }
+        }
+
+        .context__card__items {
+          display: flex;
+          padding: 0 50px;
+          h4 {
+            margin: 10px 0 5px;
+          }
+
+          .list {
+            width: 548%;
+            padding-right: 15px;
+
+            input {
+              width: 367px;
+              height: 36px;
+              border: 1px solid #ddd;
+              background-color: #f2f3f4;
+              padding-left: 10px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+
+        .context__card__tick {
+          padding: 0 50px;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+
+          input {
+            accent-color: red;
+            width: 20px;
+            height: 20px;
             cursor: pointer;
+            margin-right: 10px;
+          }
+        }
+
+        .nameSub {
+          display: flex;
+
+          .select__name {
+            padding: 20px;
+            align-items: center;
+            display: flex;
+            flex: 1;
+
+            label {
+              margin-top: -3px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .select__context {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p {
+            padding-bottom: 15px;
+            opacity: 0.6;
+          }
+
+          button {
+            margin-bottom: 25px;
+            border-radius: 5px;
           }
         }
 
