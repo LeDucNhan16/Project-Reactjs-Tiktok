@@ -1,6 +1,12 @@
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .wrapper {
   width: 1140px;
   padding: 55px 24px;
+  position: relative;
 }
 
 .coin_cents {
@@ -142,5 +148,285 @@
   span {
     font-weight: 700;
     padding-left: 10px;
+  }
+}
+
+// history
+
+.history {
+  position: fixed;
+  top: 100px;
+  bottom: 50px;
+  width: 1100px;
+  height: min(100% - 130px);
+  background-color: white;
+  z-index: 3;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 40px;
+
+  .history__head {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+
+    .icon__back {
+      font-size: 30px;
+      height: 40px;
+      padding: 20px;
+      cursor: pointer;
+    }
+
+    .title__sub {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        opacity: 0.6;
+      }
+
+      a {
+        font-size: 1.6rem;
+
+        &:hover {
+          text-decoration: revert;
+        }
+      }
+
+      .coin__deposit__terms {
+        background-color: transparent;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .history__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+.history__rules {
+  position: fixed;
+  top: 100px;
+  bottom: 50px;
+  left: 100px;
+  right: 100px;
+  height: min(100vh - 100px);
+  background-color: white;
+  z-index: 3;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 40px;
+  overflow-y: auto;
+
+  .rules {
+    .rules__items {
+      .rules__items__title {
+        padding: 10px 0;
+        li {
+          display: -webkit-inline-box;
+          padding: 5px 0;
+          flex-direction: column;
+          width: 100%;
+
+          a {
+            margin: 0 5px;
+            color: rgb(48, 94, 247);
+            &:hover {
+              color: blue;
+            }
+          }
+
+          p {
+            color: cornflowerblue;
+          }
+          ul {
+            width: 100%;
+            margin-top: 20px;
+            margin-left: -500px;
+            li {
+              display: flex;
+
+              p {
+                color: cornflowerblue;
+                display: flex;
+                margin-bottom: -24px;
+                margin-left: -18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main__recharge {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+
+  .recharge {
+    position: fixed;
+    top: 110px;
+    bottom: 50px;
+    width: 901px;
+    height: min(100% - 180px);
+    background-color: white;
+    z-index: 3;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    left: 480px;
+    overflow: hidden;
+
+    .recharge__head {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .history__body {
+      padding: 0 25px;
+      overflow-y: auto;
+      max-height: min(100vh - 230px);
+      padding-bottom: 50px;
+
+      .history__body__items {
+        padding: 20px 0;
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        justify-content: space-between;
+
+        .name {
+          display: flex;
+
+          img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+          }
+        }
+
+        .btn {
+          background-color: transparent;
+          color: red;
+          font-size: 1.6rem;
+          cursor: pointer;
+        }
+      }
+
+      .history__body__itemssub {
+        padding: 20px 0;
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        flex-direction: column;
+
+        div {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .selects {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ddd;
+        margin-top: -1px;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        .select__name {
+          padding: 20px;
+          display: flex;
+          flex: 1;
+
+          label {
+            margin-top: -3px;
+            cursor: pointer;
+          }
+        }
+
+        .select__img {
+          padding: 20px;
+
+          display: flex;
+          img {
+            width: 32px;
+            height: 20px;
+            object-fit: cover;
+          }
+        }
+        input[name="drone"] {
+          accent-color: red;
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .history__body__footer {
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid #ddd;
+
+        .title {
+          margin-bottom: 5px;
+
+          span {
+            opacity: 0.6;
+            font-size: 1.4rem;
+          }
+
+          a {
+            font-size: 1.5rem;
+            padding: 0 5px;
+            font-weight: 600;
+
+            &:hover {
+              text-decoration: revert;
+            }
+          }
+        }
+      }
+
+      .footer__btn {
+        display: flex;
+        justify-content: flex-end;
+        margin: 30px 0;
+
+        .btn__item {
+          min-width: 40px;
+          margin-right: 20px;
+          border-radius: 4px;
+          background-color: var(--white);
+          cursor: pointer;
+          border: 1px solid #ddd;
+        }
+
+        .btn__pay {
+          width: 140px;
+          border-radius: 5px;
+          background-color: var(--primary);
+          color: var(--white);
+          font-weight: 600;
+          border: 1px solid var(--primary);
+          font-size: 1.5rem;
+          height: 36px;
+          padding: 5px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
   }
 }

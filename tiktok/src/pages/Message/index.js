@@ -60,11 +60,11 @@ function Setting() {
                 back.
               </span>
               <div>
-                <input className={cx("btn")} type="radio" />
+                <input className={cx("btn")} name="gender" type="radio" />
                 Friends
               </div>
               <div>
-                <input className={cx("btn")} type="radio" />
+                <input className={cx("btn")} name="gender" type="radio" />
                 No one
               </div>
             </div>
@@ -73,7 +73,6 @@ function Setting() {
                 Cancel
               </Button>
               <Button onClick={handleMountSettingMessage} primaryRed>
-                {" "}
                 Save
               </Button>
             </div>

@@ -11,10 +11,6 @@ import { NextUpIcon } from "../../Layouts/Icons/Icons";
 
 const cx = classNames.bind(styles);
 
-const open = window.open();
-
-console.log(open);
-
 function Upload() {
   return (
     <div className={cx("wrapper")}>

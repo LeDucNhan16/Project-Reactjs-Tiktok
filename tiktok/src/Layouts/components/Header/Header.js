@@ -16,6 +16,7 @@ import styles from "./Header.module.scss";
 import Button from "../../../components/Button/Button";
 import Menu from "../../Popper/Menu";
 import {
+  BookMarkIcon,
   CoinIcon,
   HelpFeedbackIcon,
   KeyboardShortcutsIcon,
@@ -210,6 +211,11 @@ function Header() {
     {
       icon: <ViewProfileIcon />,
       title: "View profile",
+      to: config.routers.Profile,
+    },
+    {
+      icon: <BookMarkIcon />,
+      title: "Favorites",
       to: config.routers.Profile,
     },
     {
