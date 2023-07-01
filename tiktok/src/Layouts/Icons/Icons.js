@@ -1203,3 +1203,40 @@ export const QuestionMarkIcon = ({
     ></path>
   </svg>
 );
+
+export const WatchIcon = ({ className, width = "2rem", height = "2rem" }) => (
+  <svg
+    className={className}
+    width={width}
+    height={height}
+    fill="var(--TextTertiary)"
+    font-size="24px"
+    viewBox="0 0 48 48"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M22 24a2 2 0 0 0 .85 1.64l9.19 6.43a1 1 0 0 0 1.39-.25l1.15-1.64a1 1 0 0 0-.25-1.39l-7.9-5.53a1 1 0 0 1-.43-.82V13a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v11Z"></path>
+    <path d="M24 2a22 22 0 1 0 0 44 22 22 0 0 0 0-44ZM6 24a18 18 0 1 1 36 0 18 18 0 0 1-36 0Z"></path>
+  </svg>
+);
+
+export const DatedownIcon = ({
+  className,
+  width = "2rem",
+  height = "2rem",
+}) => (
+  <svg
+    className={className}
+    width={width}
+    height={height}
+    fill="var(--TextTertiary)"
+    font-size="24px"
+    viewBox="0 0 48 48"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M8 10a1 1 0 00-1 1v26a1 1 0 001 1h32a1 1 0 001-1V16a1 1 0 00-1-1H22.65l-.5-1.26-1.25-3.11a1 1 0 00-.93-.63H8zm-5 1a5 5 0 015-5h11.97a5 5 0 014.64 3.14l.74 1.86H40a5 5 0 015 5v21a5 5 0 01-5 5H8a5 5 0 01-5-5V11zm22 7a1 1 0 011 1v8.62l3.43-2.98a1 1 0 011.42.1l1.3 1.52a1 1 0 01-.1 1.4l-7.4 6.42a1 1 0 01-1.3 0l-7.4-6.41a1 1 0 01-.1-1.41l1.3-1.52a1 1 0 011.42-.1L22 27.62V19a1 1 0 011-1h2z"
+    ></path>
+  </svg>
+);

@@ -1,10 +1,13 @@
+/* eslint-disable react/jsx-pascal-case */
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 import classNames from "classnames/bind";
 
 import styles from "./Setting.module.scss";
 import {
   BackIcon,
   BellIcon,
+  DeleteIcon,
   NextIcon,
   NextUpIcon,
   PrivacyIcon,
@@ -12,126 +15,306 @@ import {
   UserIcon,
 } from "../../Layouts/Icons/Icons";
 import config from "../../config/index";
+import Button from "../../components/Button/Button";
+import NavAccounts from "./Nav__Accounts";
+import Nav__Date from "./Nav__Date";
 
 const cx = classNames.bind(styles);
 
 function Setting() {
+  const [showDelete, setShowDelete] = useState(false);
+  const [showBlocked, setShowBlocked] = useState(false);
+  const [showDownloadData, setShowDownloadData] = useState(false);
+
+  const handleShowDelete = () => {
+    setShowDelete(true);
+  };
+  const handleMountDelete = () => {
+    setShowDelete(false);
+  };
+
+  const handleShowBlocked = () => {
+    setShowBlocked(true);
+  };
+  const handleMountBlocked = () => {
+    setShowBlocked(false);
+  };
+
+  const handleShowDownloadData = () => {
+    setShowDownloadData(true);
+  };
+  const handleMountDownloadData = () => {
+    setShowDownloadData(false);
+  };
   return (
-    <div className={cx("wrapper")}>
-      <div className={cx("wrapperSub")}>
-        <Link to={config.routers.Home}>
-          <BackIcon className={cx("icon__back")} />
-        </Link>
-        <div className={cx("setting__nav")}>
-          <NavLink
-            to="http://localhost:3000/setting/"
-            className={cx("setting__nav__items")}
-          >
-            <UserIcon className={cx("icon")} />
-            <span>Manage account</span>
-          </NavLink>
-          <NavLink
-            to="http://localhost:3000/setting/#account1"
-            className={cx("setting__nav__items")}
-          >
-            <PrivacyIcon className={cx("icon")} />
-            <span>Privacy</span>
-          </NavLink>
-          <NavLink
-            to="http://localhost:3000/setting/#account2"
-            className={cx("setting__nav__items")}
-          >
-            <BellIcon className={cx("icon")} />
-            <span>Manage account</span>
-          </NavLink>
-          <NavLink
-            to="http://localhost:3000/setting/#manage"
-            className={cx("setting__nav__items")}
-          >
-            <SquareHouseIcon className={cx("icon")} />
-            <span>Manage account</span>
-          </NavLink>
-        </div>
-        <div className={cx("container")}>
-          <div className={cx("container__block")}>
-            <h2>Manage account</h2>
-            <h4>Account control</h4>
-            <div className={cx("interact")}>
-              <span>Delete account</span>
-              <Link>Delete</Link>
+    <>
+      <div className={cx("wrapper")}>
+        <div className={cx("wrapperSub")}>
+          <Link to={config.routers.Home}>
+            <BackIcon className={cx("icon__back")} />
+          </Link>
+          <div className={cx("setting__nav")}>
+            <NavLink
+              to="http://localhost:3000/setting/"
+              className={cx("setting__nav__items")}
+            >
+              <UserIcon className={cx("icon")} />
+              <span>Manage account</span>
+            </NavLink>
+            <NavLink
+              to="http://localhost:3000/setting/#account1"
+              className={cx("setting__nav__items")}
+            >
+              <PrivacyIcon className={cx("icon")} />
+              <span>Privacy</span>
+            </NavLink>
+            <NavLink
+              to="http://localhost:3000/setting/#account2"
+              className={cx("setting__nav__items")}
+            >
+              <BellIcon className={cx("icon")} />
+              <span>Manage account</span>
+            </NavLink>
+            <NavLink
+              to="http://localhost:3000/setting/#manage"
+              className={cx("setting__nav__items")}
+            >
+              <SquareHouseIcon className={cx("icon")} />
+              <span>Manage account</span>
+            </NavLink>
+          </div>
+          <div className={cx("container")}>
+            <div className={cx("container__block")}>
+              <h2>Manage account</h2>
+              <h4>Account control</h4>
+              <div className={cx("interact")}>
+                <span>Delete account</span>
+                <button onClick={handleShowDelete}>
+                  <Link>Delete</Link>
+                </button>
+              </div>
+            </div>
+            <div className={cx("container__block")}>
+              <h2>Privacy</h2>
+              <h4>Discoverability</h4>
+              <div className={cx("interact")}>
+                <span>
+                  Private account
+                  <p>
+                    With a private account, only users you approve can follow
+                    you and watch your videos. Your existing followers won't be
+                    affected.
+                  </p>
+                </span>
+              </div>
+              <div
+                onClick={handleShowBlocked}
+                className={cx("interact", "current")}
+              >
+                <span>Blocked accounts</span>
+                <NextIcon className={cx("next__icon")} />
+              </div>
+              <h4>Data</h4>
+              <div
+                onClick={handleShowDownloadData}
+                className={cx("interact", "current")}
+              >
+                <span>
+                  Private account
+                  <p>Get copy of your Tiktok Data</p>
+                </span>
+                <NextIcon className={cx("next__icon")} />
+              </div>
+            </div>
+            <div i className={cx("container__block")}>
+              <h2>Push notifications</h2>
+              <h4>Desktop notifications</h4>
+              <div className={cx("interact")}>
+                <span>
+                  Allow in browser
+                  <p>
+                    Stay on top of notifications for likes, comments, the latest
+                    videos, and more on desktop. You can turn them off anytime.
+                  </p>
+                </span>
+              </div>
+              <div className={cx("interact")}>
+                <span>
+                  Interactions
+                  <p>
+                    Your preferences will be synced automatically to the TikTok
+                    app.
+                  </p>
+                </span>
+              </div>
+              <div className={cx("interact")}>
+                <span>
+                  Private account
+                  <p>Likes, comments, new followers, mentions and tags</p>
+                </span>
+                <NextUpIcon className={cx("next__icon")} />
+              </div>
+            </div>
+            <div className={cx("container__block")}>
+              <h2>Business account</h2>
+              <h4>Business account</h4>
+              <div className={cx("interact")}>
+                <p>
+                  Access marketing tools & exclusive features through your
+                  business account to better connect with viewers.
+                </p>
+              </div>
             </div>
           </div>
-          <div className={cx("container__block")}>
-            <h2>Privacy</h2>
-            <h4>Discoverability</h4>
-            <div className={cx("interact")}>
-              <span>
-                Private account
-                <p>
-                  With a private account, only users you approve can follow you
-                  and watch your videos. Your existing followers won't be
-                  affected.
-                </p>
-              </span>
+
+          {showBlocked && (
+            <div className={cx("container__sub")}>
+              <h2 onClick={handleMountBlocked}>
+                <BackIcon className={cx("icon__back")} /> Blocked accounts
+              </h2>
+              <NavAccounts
+                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/7225779074543026182~c5_100x100.jpeg?x-expires=1688378400&x-signature=kCbeXMPcgginKsr4S2E7y8e%2F3MQ%3D"
+                title="xiao.chao.meng"
+                seeMore="Video: 97 Followers : 213213"
+                titleSub="👆🏻Follow me👆🏻
+              https://www.youtube.com/@xiao_chao_meng"
+              />
+              <NavAccounts
+                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/96e9039064dd51f4d83c655403614f26.jpeg?x-expires=1688378400&x-signature=4QFMMkfTCLhv9QVRixjVk0xMKO4%3D"
+                title="aniviaBr5"
+                seeMore="Video: 324 Followers : 3213"
+                titleSub="Main Anivia SP vui là chính . Thích Mô hình"
+              />
+              <NavAccounts
+                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/fe2818f9635b3ffe3c874fc0bc53ec0e~c5_100x100.jpeg?x-expires=1688378400&x-signature=cYVov7O3lrAygw3qXfXptTKDTGU%3D"
+                title="hoazed_neverdie"
+                seeMore="Video: 27 Followers : 6553"
+                titleSub="
+              https://www.youtube.com/@x23o_chao_meng"
+              />
+              <NavAccounts
+                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/84fbb416d86a8e984debbaab6efb170c.jpeg?x-expires=1688378400&x-signature=uVi3ak82JgqdNAf%2FNd2P33mzl6o%3D"
+                title="thanhgrakmonter"
+                seeMore="Video: 24 Followers : 34213"
+                titleSub="—————-ANWIR—————-"
+              />
+              <NavAccounts
+                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/de9cea1b7ad8184c7a03c7f07f41d86a~c5_100x100.jpeg?x-expires=1688378400&x-signature=MdnUlU8jXncSuaniLeJmfjC4jn8%3D"
+                title="xiem_123"
+                seeMore="Video: 57 Followers : 3683"
+              />
+              <NavAccounts
+                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/7225779074543026182~c5_100x100.jpeg?x-expires=1688378400&x-signature=kCbeXMPcgginKsr4S2E7y8e%2F3MQ%3D"
+                title="xiaochanggnae"
+                seeMore="Video: 97 Followers : 213213"
+                titleSub="Contact work : 0922948640"
+              />
+              <NavAccounts
+                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/2609d2f365a6ea61623559b29b0f4924~c5_100x100.jpeg?x-expires=1688378400&x-signature=T%2FN61oJemAeXL%2BGrN84UNTCCHHY%3D"
+                title="bacthaysongam"
+                seeMore="Video: 97 Followers : 63700"
+                titleSub="Clips of Legue Of legends
+              👇Edit 👇
+              contact :tuyenbnbn12@gmail.com"
+              />
+              <NavAccounts
+                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/2609d2f365a6ea61623559b29b0f4924~c5_100x100.jpeg?x-expires=1688378400&x-signature=T%2FN61oJemAeXL%2BGrN84UNTCCHHY%3D"
+                title="bestsongamday"
+                seeMore="Video: 97 Followers : 3214"
+                titleSub="Contact work : 980747828"
+              />
+              <NavAccounts
+                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/d5cc5df4242d41fc94c9067f697de6ae~c5_100x100.jpeg?x-expires=1688378400&x-signature=GfvZ8VNeWnK3%2F3kU7ir2FXQdUJA%3D"
+                title="anlyboutique"
+                seeMore="Video: 4 Followers : 23"
+                titleSub="Hàng si tuyển cao cấp, chất nhất, mẫu mã đa dạng, sỉ lẻ z.a.l.o: 0972359990"
+              />
+              <NavAccounts
+                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/9b5d11e782c0ea89e61fd6519d73c254~c5_100x100.jpeg?x-expires=1688378400&x-signature=fwf86X%2FpjBMNWqfA%2FWO7p3ULv2U%3D"
+                title="tucoi923"
+                seeMore="Video: 3 Followers : 421"
+                titleSub="Chttps://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/9b5d11e782c0ea89e61fd6519d73c254~c5_100x100.jpeg?x-expires=1688378400&x-signature=fwf86X%2FpjBMNWqfA%2FWO7p3ULv2U%3D"
+              />
+              <NavAccounts
+                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/fb082c05cd148f1da3983e3b0e2a6c61~c5_100x100.jpeg?x-expires=1688378400&x-signature=Qjt3KQ%2B63hR01hE%2FmiMnEzf6QHs%3D"
+                title="nuochoaauth"
+                seeMore="Video: 17 Followers : 213"
+              />
+              <NavAccounts
+                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/25ec8b097ff643d10622602c8d5c43fe~c5_100x100.jpeg?x-expires=1688378400&x-signature=CLodQ8I6yrYMd%2BDrbvetHFVZFPc%3D"
+                title="matakoreafan"
+                seeMore="Video: 97 Followers : 213213"
+                titleSub="Livestream tại Tiktok 10h tối mỗi ngày"
+              />
             </div>
-            <div className={cx("interact")}>
-              <span>Blocked accounts</span>
-              <NextIcon className={cx("next__icon")} />
+          )}
+
+          {showDownloadData && (
+            <div className={cx("container__sub")}>
+              <h2 onClick={handleMountDownloadData}>
+                <BackIcon className={cx("icon__back")} />
+                Download TikTok data
+              </h2>
+              <Nav__Date />
             </div>
-            <h4>Data</h4>
-            <div className={cx("interact")}>
-              <span>
-                Private account
-                <p>
-                  With a private account, only users you approve can follow you
-                  and watch your videos. Your existing followers won't be
-                  affected.
-                </p>
-              </span>
-            </div>
-          </div>
-          <div i className={cx("container__block")}>
-            <h2>Push notifications</h2>
-            <h4>Desktop notifications</h4>
-            <div className={cx("interact")}>
-              <span>
-                Allow in browser
-                <p>
-                  Stay on top of notifications for likes, comments, the latest
-                  videos, and more on desktop. You can turn them off anytime.
-                </p>
-              </span>
-            </div>
-            <div className={cx("interact")}>
-              <span>
-                Interactions
-                <p>
-                  Your preferences will be synced automatically to the TikTok
-                  app.
-                </p>
-              </span>
-            </div>
-            <div className={cx("interact")}>
-              <span>
-                Private account
-                <p>Likes, comments, new followers, mentions and tags</p>
-              </span>
-              <NextUpIcon className={cx("next__icon")} />
-            </div>
-          </div>
-          <div className={cx("container__block")}>
-            <h2>Business account</h2>
-            <h4>Business account</h4>
-            <div className={cx("interact")}>
-              <p>
-                Access marketing tools & exclusive features through your
-                business account to better connect with viewers.
-              </p>
-            </div>
-          </div>
+          )}
         </div>
       </div>
-    </div>
+      {showDelete && (
+        <div className={cx("block")}>
+          <div className={cx("block__delete")}>
+            <div className={cx("block__delete__head")}>
+              <h2>nhanle1602:delete this account?</h2>
+              <button onClick={handleMountDelete}>
+                <DeleteIcon className={cx("icon")} />
+              </button>
+            </div>
+            <div className={cx("block__delete__content")}>
+              <div className={cx("titles")}>
+                <span>Your account will be deactivated for</span>
+                <p>30 days </p>
+                <span>
+                  and won’t be visible to the public. During deactivation, you
+                  can reactivate your TikTok account anytime.After Your account
+                  will be deactivated for Your account will be deactivated for
+                </span>
+                <p>30 days </p>
+                <span>
+                  , your account and data will be deleted permanently.
+                </span>
+              </div>
+              <ul>
+                <span>If you delete your account:</span>
+                <li>
+                  You won’t be able to log in and use any TikTok services with
+                  that account
+                </li>
+                <li>You will lose access to all your videos</li>
+                <li>
+                  Information that isn’t stored in your account, such as direct
+                  messages, may still be visible to others
+                </li>
+                <li>
+                  Information that isn’t stored on TikTok servers, such as
+                  drafts, will be removed. You won’t be able to download such
+                  information after deleting your account.
+                </li>
+                <li>
+                  You won’t be able to get a refund on any items you purchased
+                  or received.
+                </li>
+                <span>Do you want to continue?</span>
+              </ul>
+              <div className={cx("block__delete__btn")}>
+                <Button onClick={handleMountDelete} largePay>
+                  Continue
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 export default Setting;
