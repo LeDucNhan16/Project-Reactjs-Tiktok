@@ -6,9 +6,9 @@
 // menu items
 
 .menu_items {
-  background-color: transparent;
   padding: 12px 15px;
   width: 100%;
+  background-color: transparent;
   display: flex;
 
   &:hover {
@@ -21,10 +21,10 @@
 // menu items
 .menu_item,
 .menu_login {
-  position: relative;
   height: 50px;
-  border-top: 1px solid rgba(22, 24, 35, 0.1);
   line-height: 1.8rem;
+  position: relative;
+  border-top: 1px solid rgba(22, 24, 35, 0.1);
 
   &:hover {
     cursor: pointer;
@@ -34,17 +34,17 @@
 .menu_item_btn,
 .menu_login_btn {
   font-size: 2rem;
-  background-color: transparent;
   padding: 15px;
+  background-color: transparent;
   cursor: pointer;
 }
 
 .menu_item_title,
 .menu_login_title {
   font-size: 1.6rem;
-  position: absolute;
   top: 50%;
   left: 50%;
+  position: absolute;
   transform: translate(-50%, -50%);
 }
 

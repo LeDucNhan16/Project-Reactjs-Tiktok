@@ -1,16 +1,16 @@
 .wrapper__tippy {
+  border-radius: 8px;
+  width: 270px;
+  max-height: min(40vh);
   display: flex;
   flex-direction: column;
   background-color: white;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 270px;
-  max-height: min(40vh);
   overflow-y: auto;
 
   .wrapper__tippy__items {
-    display: flex;
     padding: 10px;
+    display: flex;
 
     .share__subIcon {
       margin: 0 15px 0px 10px;

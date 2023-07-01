@@ -1,7 +1,7 @@
 .wrapper {
   width: 240px;
-  overflow: hidden;
   max-height: min(100vh);
+  overflow: hidden;
 
   &:hover {
     overflow-y: auto;

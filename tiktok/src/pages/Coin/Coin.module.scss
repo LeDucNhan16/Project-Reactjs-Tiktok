@@ -67,8 +67,8 @@ button {
 }
 
 .load_coin {
-  display: flex;
   margin: 20px 0;
+  display: flex;
 
   .load_coin_colored {
     margin-left: 5px;
@@ -76,15 +76,15 @@ button {
   }
 
   .load_coin_icon {
-    color: rgba(22, 24, 35, 0.5);
     margin: 4px 0 0 3px;
+    color: rgba(22, 24, 35, 0.5);
   }
 }
 
 .coin_list {
   .coin_list_btn {
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -126,10 +126,10 @@ button {
 }
 
 .payment_methods {
-  display: flex;
-  align-items: center;
   margin: 10px 0;
   font-weight: 200;
+  display: flex;
+  align-items: center;
 
   p {
     padding-right: 3px;
@@ -137,8 +137,8 @@ button {
   .avatar_pay {
     width: 22px;
     height: 14px;
-    display: inline-block;
     margin-right: 4px;
+    display: inline-block;
     cursor: pointer;
   }
 }
@@ -154,7 +154,6 @@ button {
 // history
 
 .history {
-  position: fixed;
   top: 100px;
   bottom: 50px;
   width: 1100px;
@@ -164,11 +163,12 @@ button {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 40px;
+  position: fixed;
 
   .history__head {
+    padding-bottom: 20px;
     display: flex;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
 
     .icon__back {
       font-size: 30px;
@@ -194,28 +194,28 @@ button {
       }
 
       .coin__deposit__terms {
-        background-color: transparent;
         margin-left: 5px;
+        background-color: transparent;
       }
     }
   }
 
   .history__body {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
   }
 }
-
+// history
 .history__rules {
   position: fixed;
   top: 100px;
   bottom: 50px;
-  left: 100px;
-  right: 100px;
-  height: min(100vh - 100px);
+  display: flex;
+  width: 1100px;
+  height: min(100vh - 130px);
   background-color: white;
   z-index: 3;
   border: 1px solid #ddd;
@@ -268,11 +268,13 @@ button {
 .main__recharge {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
+  align-items: center;
 
   .recharge {
-    position: fixed;
     top: 110px;
     bottom: 50px;
     width: 901px;
@@ -281,21 +283,22 @@ button {
     z-index: 3;
     border: 1px solid #ddd;
     border-radius: 10px;
-    left: 480px;
+
+    position: fixed;
     overflow: hidden;
 
     .recharge__head {
+      padding: 25px;
       display: flex;
       justify-content: space-between;
-      padding: 25px;
       border-bottom: 1px solid #ddd;
     }
 
     .history__body {
       padding: 0 25px;
-      overflow-y: auto;
-      max-height: min(100vh - 230px);
       padding-bottom: 50px;
+      max-height: min(100vh - 230px);
+      overflow-y: auto;
 
       .history__body__items {
         padding: 20px 0;
@@ -310,15 +313,15 @@ button {
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            object-fit: cover;
             margin-right: 10px;
+            object-fit: cover;
           }
         }
 
         .btn {
+          font-size: 1.6rem;
           background-color: transparent;
           color: red;
-          font-size: 1.6rem;
           cursor: pointer;
         }
       }
@@ -336,11 +339,11 @@ button {
       }
 
       .selects {
+        margin-top: -1px;
+        margin-bottom: 20px;
         display: flex;
         justify-content: space-between;
         border: 1px solid #ddd;
-        margin-top: -1px;
-        margin-bottom: 20px;
         cursor: pointer;
         flex-direction: column;
 
@@ -349,15 +352,15 @@ button {
           justify-content: space-between;
 
           .select__name {
-            display: flex;
             padding: 20px;
+            display: flex;
             align-items: center;
           }
         }
 
         .context__card__items {
-          display: flex;
           padding: 0 50px;
+          display: flex;
           h4 {
             margin: 10px 0 5px;
           }
@@ -369,10 +372,10 @@ button {
             input {
               width: 367px;
               height: 36px;
-              border: 1px solid #ddd;
-              background-color: #f2f3f4;
               padding-left: 10px;
               margin-bottom: 20px;
+              border: 1px solid #ddd;
+              background-color: #f2f3f4;
             }
           }
         }
@@ -387,8 +390,8 @@ button {
             accent-color: red;
             width: 20px;
             height: 20px;
-            cursor: pointer;
             margin-right: 10px;
+            cursor: pointer;
           }
         }
 
@@ -435,10 +438,10 @@ button {
           }
         }
         input[name="drone"] {
-          accent-color: red;
           margin-right: 10px;
           width: 20px;
           height: 20px;
+          accent-color: red;
         }
       }
 
@@ -467,9 +470,9 @@ button {
       }
 
       .footer__btn {
+        margin: 30px 0;
         display: flex;
         justify-content: flex-end;
-        margin: 30px 0;
 
         .btn__item {
           min-width: 40px;
@@ -483,12 +486,12 @@ button {
         .btn__pay {
           width: 140px;
           border-radius: 5px;
-          background-color: var(--primary);
-          color: var(--white);
-          font-weight: 600;
-          border: 1px solid var(--primary);
           font-size: 1.5rem;
           height: 36px;
+          font-weight: 600;
+          background-color: var(--primary);
+          color: var(--white);
+          border: 1px solid var(--primary);
           padding: 5px;
           cursor: pointer;
 

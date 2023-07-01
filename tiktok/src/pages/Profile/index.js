@@ -61,23 +61,25 @@ function Profile() {
               <FontAwesomeIcon icon={faPenToSquare} /> Edit Profile
             </button>
           </div>
-
-          <Tippy
-            hideOnClick={false}
-            interactive
-            offset={[20, -10]}
-            delay={[0, 500]}
-            placement="bottom-end"
-            render={(attrs) => (
-              <div tabIndex="-1" {...attrs}>
-                <ShareInformation />
-              </div>
-            )}
-          >
-            <button className={cx("arrow__icon__btn")}>
-              <ArrowRightIcon />
-            </button>
-          </Tippy>
+          {/* Using a wrapper <div> or <span> tag around the reference element solves this by creating a new parentNode context.  */}
+          <div>
+            <Tippy
+              hideOnClick={false}
+              interactive
+              offset={[20, -10]}
+              delay={[0, 500]}
+              placement="bottom-end"
+              render={(attrs) => (
+                <div tabIndex="-1" {...attrs}>
+                  <ShareInformation />
+                </div>
+              )}
+            >
+              <button className={cx("arrow__icon__btn")}>
+                <ArrowRightIcon />
+              </button>
+            </Tippy>
+          </div>
         </div>
         <div className={cx("id__Name__Sub")}>
           <ul>

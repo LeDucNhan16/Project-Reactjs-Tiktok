@@ -1,16 +1,16 @@
 .nav {
-  overflow-x: hidden;
-  max-width: min(100% - 40px);
-  display: flex;
   padding: 20px 0;
   margin-left: 10px;
+  max-width: min(100% - 40px);
+  display: flex;
+  overflow-x: hidden;
 
   .nav__items {
-    display: flex;
     padding: 5px;
-    border: 1px solid transparent;
-    border-radius: 10px;
     margin-right: 10px;
+    border-radius: 10px;
+    display: flex;
+    border: 1px solid transparent;
     background-color: #f1f1f1;
     cursor: pointer;
 
@@ -21,10 +21,10 @@
     }
 
     span {
-      white-space: nowrap;
       padding: 0 10px 0 0;
       font-size: 1.5rem;
       margin-top: 2px;
+      white-space: nowrap;
     }
   }
   .icon {
@@ -35,9 +35,9 @@
 }
 
 .wrapper__sub {
+  margin-left: 10px;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 10px;
 
   .block {
     margin-bottom: 20px;
@@ -47,9 +47,9 @@
     overflow: hidden;
 
     .block__img {
-      overflow: hidden;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
+      overflow: hidden;
 
       img {
         width: 300px;
@@ -76,9 +76,9 @@
       }
 
       .id__name {
+        padding-top: 10px;
         display: flex;
         justify-content: space-between;
-        padding-top: 10px;
 
         .name {
           display: flex;
@@ -89,8 +89,8 @@
           height: 24px;
           margin-right: 10px;
           border-radius: 50%;
-          object-fit: cover;
           margin-bottom: -5px;
+          object-fit: cover;
         }
       }
 

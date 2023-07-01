@@ -5,20 +5,20 @@
   .main {
     width: 700px;
     height: 100%;
+    padding: 40px 0 30px;
     display: flex;
     justify-content: space-between;
-    padding: 40px 0 30px;
     border-bottom: 1px solid #ddd;
   }
 
   .img__video {
     width: 56px;
     height: 56px;
+    min-width: 56px;
+    margin-right: 10px;
     border-radius: 50%;
     cursor: pointer;
     object-fit: cover;
-    min-width: 56px;
-    margin-right: 10px;
   }
 
   .video {
@@ -35,8 +35,8 @@
 
     .name {
       font-weight: 600;
-      display: flex;
       margin-bottom: 5px;
+      display: flex;
 
       &:hover {
         text-decoration: underline;
@@ -53,14 +53,14 @@
     }
 
     .title {
-      display: inline-block;
       padding-right: 2.5px;
+      display: inline-block;
     }
 
     .title__nav {
-      display: inline-block;
       padding: 0 2.5px;
       font-weight: 600;
+      display: inline-block;
 
       &:hover {
         text-decoration: underline;
@@ -69,10 +69,10 @@
     }
 
     .music {
-      display: block;
-      background-color: transparent;
       margin: 10px 0;
       font-weight: 600;
+      display: block;
+      background-color: transparent;
 
       &:hover {
         cursor: pointer;
@@ -86,8 +86,8 @@
 
       .video__main__video {
         border-radius: 5px;
-        overflow: hidden;
         width: 380px;
+        overflow: hidden;
       }
 
       .video__main__navigation {
@@ -100,8 +100,8 @@
           flex-direction: column;
 
           .block {
-            background-color: transparent;
             margin-bottom: 15px;
+            background-color: transparent;
 
             .block__icon {
               display: flex;
@@ -111,9 +111,9 @@
                 width: 48px;
                 height: 48px;
                 border-radius: 50%;
+                margin-bottom: 5px;
                 background-color: #ddd;
                 cursor: pointer;
-                margin-bottom: 5px;
 
                 .icon {
                   margin-bottom: -20px;

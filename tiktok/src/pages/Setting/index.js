@@ -25,6 +25,7 @@ function Setting() {
   const [showDelete, setShowDelete] = useState(false);
   const [showBlocked, setShowBlocked] = useState(false);
   const [showDownloadData, setShowDownloadData] = useState(false);
+  const [showPersonalAccount, setShowPersonalAccount] = useState(false);
 
   const handleShowDelete = () => {
     setShowDelete(true);
@@ -46,6 +47,10 @@ function Setting() {
   const handleMountDownloadData = () => {
     setShowDownloadData(false);
   };
+  const handleShowandMountPersonalAccount = () => {
+    setShowPersonalAccount(!showPersonalAccount);
+  };
+
   return (
     <>
       <div className={cx("wrapper")}>
@@ -84,7 +89,7 @@ function Setting() {
             </NavLink>
           </div>
           <div className={cx("container")}>
-            <div className={cx("container__block")}>
+            <div className={cx("container__blocks")}>
               <h2>Manage account</h2>
               <h4>Account control</h4>
               <div className={cx("interact")}>
@@ -94,7 +99,7 @@ function Setting() {
                 </button>
               </div>
             </div>
-            <div className={cx("container__block")}>
+            <div className={cx("container__blocks")}>
               <h2>Privacy</h2>
               <h4>Discoverability</h4>
               <div className={cx("interact")}>
@@ -126,7 +131,7 @@ function Setting() {
                 <NextIcon className={cx("next__icon")} />
               </div>
             </div>
-            <div i className={cx("container__block")}>
+            <div i className={cx("container__blocks")}>
               <h2>Push notifications</h2>
               <h4>Desktop notifications</h4>
               <div className={cx("interact")}>
@@ -147,15 +152,34 @@ function Setting() {
                   </p>
                 </span>
               </div>
-              <div className={cx("interact")}>
+              <div
+                onClick={handleShowandMountPersonalAccount}
+                className={cx("interact", "cursor__pointer")}
+              >
                 <span>
                   Private account
                   <p>Likes, comments, new followers, mentions and tags</p>
                 </span>
                 <NextUpIcon className={cx("next__icon")} />
               </div>
+              {showPersonalAccount && (
+                <div className={cx("personal__account")}>
+                  <div className={cx("personal__account__block")}>
+                    <h4>Likes</h4>
+                  </div>
+                  <div className={cx("personal__account__block")}>
+                    <h4>Comments</h4>
+                  </div>
+                  <div className={cx("personal__account__block")}>
+                    <h4>New followers</h4>
+                  </div>
+                  <div className={cx("personal__account__block")}>
+                    <h4>Mentions and tags</h4>
+                  </div>
+                </div>
+              )}
             </div>
-            <div className={cx("container__block")}>
+            <div className={cx("container__blocks")}>
               <h2>Business account</h2>
               <h4>Business account</h4>
               <div className={cx("interact")}>

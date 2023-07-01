@@ -1,11 +1,11 @@
 .wrapper {
-  background-color: #f4f4f4;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow-y: auto;
-  max-height: min(100vh - 70px);
   height: 2000px;
+  display: flex;
+  overflow-y: auto;
+  justify-content: center;
+  background-color: #f4f4f4;
+  max-height: min(100vh - 70px);
 
   .next__icon {
     cursor: pointer;
@@ -17,24 +17,24 @@
     display: flex;
 
     .icon__back {
-      background-color: #ddd;
-      border-radius: 50%;
       padding: 10px;
+      border-radius: 50%;
       margin-right: 20px;
+      background-color: #ddd;
     }
 
     .setting__nav {
       width: 355px;
-      background-color: rgba(255, 255, 255, 1);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      border-radius: 8px;
-      overflow: hidden auto;
       height: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      background-color: rgba(255, 255, 255, 1);
+      overflow: hidden auto;
 
       .title {
+        padding: 20px;
         display: flex;
         justify-content: space-between;
-        padding: 20px;
 
         button {
           background-color: transparent;
@@ -48,48 +48,48 @@
       }
 
       .title__items__sub {
+        opacity: 0.8;
         padding: 10px 0;
+        font-size: 1.3rem;
         padding-left: 21px;
         display: block;
         background-color: #f4f4f4;
-        font-size: 1.3rem;
-        opacity: 0.8;
       }
     }
 
     .container {
       width: 700px;
+      height: 100%;
+      margin-left: 20px;
+      border-radius: 8px;
       background-color: var(--white);
       background-color: rgba(255, 255, 255, 1);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      border-radius: 8px;
       overflow: hidden auto;
-      height: 100%;
-      margin-left: 20px;
     }
   }
 
   .block {
-    position: fixed;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     outline: 0px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
 
     .block__message {
       width: 700px;
+      border-radius: 8px;
       background: rgb(255, 255, 255);
       box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
-      border-radius: 8px;
 
       .head__massage__setting {
+        padding: 20px;
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid #ddd;
-        padding: 20px;
 
         h1 {
           font-size: 25px;
@@ -124,8 +124,8 @@
       }
 
       .block__btn {
-        border-top: 1px solid #ddd;
         padding: 20px;
+        border-top: 1px solid #ddd;
         display: flex;
         justify-content: flex-end;
 

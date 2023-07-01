@@ -2,11 +2,11 @@ button {
   background-color: transparent;
 }
 .wrapper {
-  background-color: #f4f4f4;
   width: 100%;
   display: flex;
-  justify-content: center;
   overflow-y: auto;
+  justify-content: center;
+  background-color: #f4f4f4;
   max-height: min(100vh - 50px);
   .next__icon {
     cursor: pointer;
@@ -19,20 +19,20 @@ button {
     position: relative;
 
     .icon__back {
-      background-color: #ddd;
-      border-radius: 50%;
       padding: 10px;
+      border-radius: 50%;
       margin-right: 20px;
+      background-color: #ddd;
     }
 
     .setting__nav {
       width: 355px;
+      height: 100%;
+      border-radius: 8px 8px 0 0;
+      overflow: hidden auto;
       background-color: var(--white);
       background-color: rgba(255, 255, 255, 1);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      border-radius: 8px 8px 0 0;
-      overflow: hidden auto;
-      height: 100%;
 
       .setting__nav__items {
         padding: 15px;
@@ -45,8 +45,8 @@ button {
         }
 
         .icon {
-          margin-bottom: -10px;
           width: 2.6rem;
+          margin-bottom: -10px;
         }
         &:focus::after {
           color: #fe2c55;
@@ -56,16 +56,16 @@ button {
 
     .container {
       width: 700px;
+      height: 100%;
+      margin-left: 20px;
+      border-radius: 8px 8px 0 0;
       background-color: var(--white);
       background-color: rgba(255, 255, 255, 1);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      border-radius: 8px 8px 0 0;
       overflow: hidden auto;
-      height: 100%;
-      margin-left: 20px;
 
-      .container__block {
-        padding: 25px 30px;
+      .container__blocks {
+        padding: 15px 30px;
 
         h4 {
           font-size: 17px;
@@ -95,6 +95,20 @@ button {
 
         a {
           color: #fe2c55;
+          font-weight: 600;
+        }
+
+        .personal__account {
+          background-color: rgba(22, 24, 35, 0.03);
+          padding: 10px 20px 10px 20px;
+          margin-top: 10px;
+
+          .personal__account__block {
+            padding: 5px 0;
+          }
+        }
+        .cursor__pointer {
+          cursor: pointer;
         }
       }
     }
@@ -103,49 +117,49 @@ button {
     .container__sub {
       right: 0;
       width: 700px;
-      background-color: rgb(255, 255, 255);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      height: 100%;
+      padding: 0 30px;
+      margin-right: 25px;
       border-radius: 8px 8px 0 0;
       max-height: min(100vh - 80px);
-      padding: 0 30px;
-      height: 100%;
-      margin-right: 25px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       overflow-y: auto;
       position: absolute;
 
       // Blocked Accounts
       h2 {
-        display: flex;
-        cursor: pointer;
         padding-top: 20px;
         padding-bottom: 15px;
+        display: flex;
+        cursor: pointer;
 
         .icon__back {
-          background-color: #ddd;
-          border-radius: 50%;
-          padding: 5px;
-          margin-right: 20px;
-          font-size: 10px;
           width: 40px;
           height: 40px;
+          padding: 5px;
+          font-size: 10px;
+          margin-right: 20px;
+          border-radius: 50%;
+          background-color: #ddd;
         }
       }
 
       .container__sub__items {
+        margin: 10px 0;
         display: flex;
         align-items: center;
-        margin: 10px 0;
 
         img {
           width: 64px;
           height: 64px;
-          object-fit: cover;
           border-radius: 50%;
+          object-fit: cover;
         }
 
         .title {
-          margin: 0 15px;
           flex: 1;
+          margin: 0 15px;
 
           span {
             font-size: 1.4rem;
@@ -158,15 +172,15 @@ button {
         display: flex;
 
         .nav__items {
+          flex: 1;
+          margin: 0 5px;
+          padding: 5px 0;
           font-size: 1.8rem;
+          border-radius: 5px;
           cursor: pointer;
           display: flex;
           justify-content: center;
-          flex: 1;
           border: 1px solid #ddd;
-          margin: 0 5px;
-          border-radius: 5px;
-          padding: 5px 0;
           &:focus,
           &:hover {
             color: #fe2c55;
@@ -178,9 +192,9 @@ button {
       .content {
         padding-bottom: 1px;
         .content__sub {
+          opacity: 0.6;
           padding: 10px;
           font-size: 1.4rem;
-          opacity: 0.6;
           margin: 10px 5px;
           display: inline-block;
           background-color: #ddd;
@@ -218,8 +232,8 @@ button {
           }
         }
         .content__btn {
-          margin-bottom: 50px;
           margin-top: 40px;
+          margin-bottom: 50px;
 
           button {
             width: 100%;
@@ -228,11 +242,11 @@ button {
         }
       }
       .content__download {
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
 
         .date__con__giant {
           width: 100px;
@@ -259,14 +273,14 @@ button {
   .block__delete {
     width: 700px;
     max-height: 100%;
-    background-color: white;
     border-radius: 8px;
+    background-color: white;
     border: 1px solid #ddd;
 
     .block__delete__head {
+      padding: 20px 30px;
       display: flex;
       justify-content: space-between;
-      padding: 20px 30px;
       border-bottom: 1px solid #ddd;
 
       .icon {
@@ -277,8 +291,8 @@ button {
 
     .block__delete__content {
       padding: 30px 40px;
-      overflow-y: auto;
       max-height: min(100vh - 230px);
+      overflow-y: auto;
 
       span {
         opacity: 0.8;
@@ -286,25 +300,25 @@ button {
       }
 
       p {
-        display: inline-block;
         font-weight: 600;
+        display: inline-block;
       }
 
       ul {
         margin: 10px;
 
         li {
-          font-size: 1.4rem;
           opacity: 0.8;
-          list-style: disc;
+          font-size: 1.4rem;
           margin: 10px 0 10px 15px;
+          list-style: disc;
         }
       }
     }
     .block__delete__btn {
       margin-top: 40px;
-      border-top: 1px solid #ddd;
       padding: 30px 30px 0;
+      border-top: 1px solid #ddd;
       display: flex;
       justify-content: flex-end;
 

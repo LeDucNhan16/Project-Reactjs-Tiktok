@@ -7,8 +7,8 @@
     height: 200px;
 
     .id__name {
-      display: flex;
       width: 100%;
+      display: flex;
 
       .img {
         width: 115px;
@@ -18,9 +18,9 @@
       }
 
       .title {
+        flex: 10;
         display: flex;
         flex-direction: column;
-        flex: 10;
 
         h1 {
           font-weight: 900;
@@ -51,17 +51,17 @@
         }
       }
       .arrow__icon__btn {
-        background-color: transparent;
         height: 55px;
         cursor: pointer;
+        background-color: transparent;
       }
     }
     .id__Name__Sub {
       display: flex;
 
       ul {
-        display: flex;
         margin: 20px 10px;
+        display: flex;
 
         span {
           opacity: 0.6;
@@ -78,10 +78,10 @@
     .nav__items {
       padding: 5px 15px;
       line-height: 46px;
-      border-bottom: 2px solid white;
       cursor: pointer;
-      transition: transform 0.3s ease 0s;
       transform: translateX(0px);
+      border-bottom: 2px solid white;
+      transition: transform 0.3s ease 0s;
 
       &:focus,
       &:hover {
@@ -164,10 +164,10 @@
             .input__username {
               width: 360px;
               height: 38px;
+              font-size: 16px;
               line-height: 24px;
               padding: 7px 12px;
               border-radius: 4px;
-              font-size: 16px;
               background-color: rgba(22, 24, 35, 0.06);
               caret-color: rgb(254, 44, 85);
               color: rgb(22, 24, 35);
@@ -200,10 +200,10 @@
       }
 
       .block__btn {
-        border-top: 1px solid #ddd;
         padding: 20px;
         display: flex;
         justify-content: flex-end;
+        border-top: 1px solid #ddd;
 
         button {
           padding: 5px;
@@ -220,9 +220,9 @@
   align-items: center;
 
   .icon__your {
+    opacity: 0.6;
     margin-top: 250px;
     margin-bottom: 10px;
-    opacity: 0.6;
   }
 }
 
@@ -230,6 +230,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 15px;
 
   .video {
     width: 190px;
