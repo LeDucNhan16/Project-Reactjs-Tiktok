@@ -106,7 +106,7 @@
 
   .context {
     height: 500px;
-    max-height: min(100vh);
+    max-height: min(100vh - 250px);
     overflow-y: auto;
 
     h3 {

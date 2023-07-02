@@ -15,10 +15,14 @@ function HistoryRules() {
           <h3>Date: Aug. 17, 2021</h3>
           <ul className={cx("rules__items__title")}>
             <li>
-              These terms and conditions (the <h4>"Terms"</h4>) regarding the
-              purchase of virtual coins <h4>("Coins")</h4> on the TikTok website
-              at www.tiktok.com (the <h4>"Website"</h4>) govern the relationship
-              and serve as an agreement between you
+              <span>These terms and conditions (the</span> <h4>"Terms"</h4>)
+              <span>regarding the purchase of virtual coins</span>
+              <h4>("Coins")</h4>
+              <span>on the TikTok website at www.tiktok.com (the</span>
+              <h4>"Website"</h4>)
+              <span>
+                govern the relationship and serve as an agreement between you
+              </span>
             </li>
             <li>
               (the

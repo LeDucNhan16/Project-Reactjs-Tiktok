@@ -32,9 +32,11 @@ function Coin() {
   const handleShowHistory = () => {
     setShowHistory(true);
   };
+
   const handleShowcoinDepositTerms = () => {
     setDepositTerms(true);
   };
+
   const handleShowRecharge = () => {
     setRecharge(true);
   };
@@ -46,6 +48,7 @@ function Coin() {
     setShowCard(false);
     setShowMomo(true);
   };
+
   const handleShowCard = () => {
     setShowMomo(false);
     setShowCard(true);
@@ -603,18 +606,18 @@ function Coin() {
                           <input placeholder="1234 4213 2134 2134" />
                         </div>
                         <div className={cx("list")}>
-                          <h4>Card number</h4>
-                          <input placeholder="1234 4213 2134 2134" />
+                          <h4>Expiration date</h4>
+                          <input placeholder="MM/YY" />
                         </div>
                       </div>
                       <div className={cx("context__card__items")}>
                         <div className={cx("list")}>
-                          <h4>Card number</h4>
-                          <input placeholder="1234 4213 2134 2134" />
+                          <h4>Security code</h4>
+                          <input placeholder="CVV/CVC" />
                         </div>
                         <div className={cx("list")}>
-                          <h4>Card number</h4>
-                          <input placeholder="1234 4213 2134 2134" />
+                          <h4>Cardholder name</h4>
+                          <input placeholder="Cardholder name" />
                         </div>
                       </div>
                       <div className={cx("context__card__tick")}>
@@ -650,14 +653,21 @@ function Coin() {
               <div className={cx("history__body__footer")}>
                 <ul className={cx("title")}>
                   <span>By clicking “Pay now”, you agree to our</span>
-                  <Link>Terms of Purchase for Coins.</Link>
+                  <button onClick={handleShowcoinDepositTerms}>
+                    <Link>Terms of Purchase for Coins.</Link>
+                  </button>
                   <span>
                     By using any amount of Coins within 14 days after clicking
                     “Pay Now”, you acknowledge and confirm that you will no
                     longer be eligible for a refund of this order. Payment
                     transactions are processed by PIPO
                   </span>
-                  <Link>. PIPO Privacy Policy</Link>
+                  <Link
+                    to="https://oneunita.com/privacy_policy?locale=en"
+                    target="_blank"
+                  >
+                    . PIPO Privacy Policy
+                  </Link>
                 </ul>
                 <ul className={cx("title")}>
                   <span>
