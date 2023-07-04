@@ -131,7 +131,7 @@ function Setting() {
                 <NextIcon className={cx("next__icon")} />
               </div>
             </div>
-            <div i className={cx("container__blocks")}>
+            <div className={cx("container__blocks")}>
               <h2>Push notifications</h2>
               <h4>Desktop notifications</h4>
               <div className={cx("interact")}>

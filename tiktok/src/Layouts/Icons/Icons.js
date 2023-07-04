@@ -1210,7 +1210,7 @@ export const WatchIcon = ({ className, width = "2rem", height = "2rem" }) => (
     width={width}
     height={height}
     fill="var(--TextTertiary)"
-    font-size="24px"
+    fontSize="24px"
     viewBox="0 0 48 48"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -1229,7 +1229,7 @@ export const DatedownIcon = ({
     width={width}
     height={height}
     fill="var(--TextTertiary)"
-    font-size="24px"
+    fontSize="24px"
     viewBox="0 0 48 48"
     xmlns="http://www.w3.org/2000/svg"
   >

@@ -42,25 +42,27 @@ function Menu({ children, items = [] }) {
   };
 
   return (
-    <Tippy
-      hideOnClick={false}
-      interactive
-      placement="bottom-end"
-      offset={[15, 15]}
-      delay={[0, 500]}
-      render={(attrs) => (
-        <div className={cx("menu_list")} tabIndex="-1" {...attrs}>
-          <PopperWrapper>
-            {history.length > 1 && <HeaderMenu onBack={handleBachMenu} />}
-            <div className={cx("menu_body")}>{renderItems()}</div>
-            {history.length === 1 && <MenuLoginOut />}
-          </PopperWrapper>
-        </div>
-      )}
-      onHidden={handleClickHiddenResultSearch}
-    >
-      {children}
-    </Tippy>
+    <div>
+      <Tippy
+        hideOnClick={false}
+        interactive
+        placement="bottom-end"
+        offset={[15, 15]}
+        delay={[0, 500]}
+        render={(attrs) => (
+          <div className={cx("menu_list")} tabIndex="-1" {...attrs}>
+            <PopperWrapper>
+              {history.length > 1 && <HeaderMenu onBack={handleBachMenu} />}
+              <div className={cx("menu_body")}>{renderItems()}</div>
+              {history.length === 1 && <MenuLoginOut />}
+            </PopperWrapper>
+          </div>
+        )}
+        onHidden={handleClickHiddenResultSearch}
+      >
+        {children}
+      </Tippy>
+    </div>
   );
 }
 

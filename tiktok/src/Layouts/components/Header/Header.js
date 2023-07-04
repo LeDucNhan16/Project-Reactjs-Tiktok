@@ -11,6 +11,7 @@ import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
 import "tippy.js/dist/tippy.css";
 import { Link } from "react-router-dom";
+import React from "react";
 
 import styles from "./Header.module.scss";
 import Button from "../../../components/Button/Button";
@@ -324,16 +325,12 @@ function Header() {
             Upload
           </Button>
           {currentResult ? (
-            <>
-              <Tippy
-                delay={[0, 200]}
-                content="Message"
-                placement="bottom"
-                hideOnClick={false}
-              >
-                <Button to={config.routers.Message} className={cx("login_btn")}>
+            // Using a wrapper <div> tag around the reference element solves this by creating a new parentNode context.
+            <div>
+              <Tippy delay={[0, 200]} placement="bottom" hideOnClick={false}>
+                <a href={config.routers.Message} className={cx("login_btn")}>
                   <MessageIcon />
-                </Button>
+                </a>
               </Tippy>
               <Tippy
                 delay={[100, 500]}
@@ -350,7 +347,7 @@ function Header() {
                   <NotificationIcon />
                 </button>
               </Tippy>
-            </>
+            </div>
           ) : (
             <Button primary>Log in</Button>
           )}

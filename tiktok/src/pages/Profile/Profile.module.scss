@@ -95,21 +95,25 @@
   }
 
   .block {
-    top: 30px;
+    top: 60px;
     width: 100%;
+    left: -10px;
     height: 100%;
     outline: 0px;
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
+    right: -3%;
+    background-color: rgba(0, 0, 0, 0.3);
 
     .block__profile {
+      position: absolute;
+      top: 6%;
       width: 700px;
       border-radius: 8px;
       background: rgb(255, 255, 255);
       box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
-      max-height: min(100vh - 100px);
+      max-height: min(100vh - 160px);
       overflow: hidden;
 
       .head__profile__setting {
@@ -133,7 +137,7 @@
 
       .body__profile__setting {
         padding: 20px 20px 0 20px;
-        max-height: min(100vh);
+        max-height: min(100vh - 340px);
         overflow-x: auto;
 
         .context {
@@ -202,13 +206,17 @@
       }
 
       .block__btn {
-        padding: 20px;
+        padding: 35px 20px;
         display: flex;
         justify-content: flex-end;
         border-top: 1px solid #ddd;
 
         button {
-          padding: 5px;
+          padding: 10px 20px;
+          width: 130px;
+          height: 40px;
+          font-size: 1.6rem;
+          font-weight: 600;
           border-radius: 6px;
         }
       }

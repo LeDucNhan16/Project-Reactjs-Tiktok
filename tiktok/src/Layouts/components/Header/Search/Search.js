@@ -7,8 +7,6 @@ import {
   faMagnifyingGlass,
   //   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
-import "tippy.js/dist/tippy.css";
-import Tippy from "@tippyjs/react";
 
 import classNames from "classnames/bind";
 import HeadLessTippy from "@tippyjs/react/headless";

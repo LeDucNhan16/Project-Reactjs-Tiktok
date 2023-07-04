@@ -105,13 +105,13 @@ function Context({
               </span>
               <p className={cx("title")}>{titleMain}</p>
               <nav className={cx("title__nav")}>{titleId}</nav>
-              <button className={cx("music")}>
+              <div className={cx("music")}>
                 <span>Nhạc Nền - </span>
                 <span className={cx("music__btn")}>{titleMusic}</span>
-              </button>
+              </div>
             </div>
             {btn__Following && (
-              <button
+              <div
                 onClick={() => setFollow(!follow)}
                 className={cx("btn__following")}
               >
@@ -120,7 +120,7 @@ function Context({
                 ) : (
                   <Button primaryActive>Following</Button>
                 )}
-              </button>
+              </div>
             )}
           </div>
 
@@ -135,10 +135,7 @@ function Context({
             </video>
             <div className={cx("video__main__navigation")}>
               <div className={cx("navigation__sub")}>
-                <button
-                  className={cx("block")}
-                  onClick={() => setHeart(!heart)}
-                >
+                <div className={cx("block")} onClick={() => setHeart(!heart)}>
                   {heart ? (
                     <div className={cx("block__icon")}>
                       <div className={cx("block__icon__btn")}>
@@ -160,9 +157,9 @@ function Context({
                       <span>{title__HeartIcon}</span>
                     </div>
                   )}
-                </button>
+                </div>
 
-                <button className={cx("block")}>
+                <div className={cx("block")}>
                   <div className={cx("block__icon")}>
                     <div className={cx("block__icon__btn")}>
                       <FontAwesomeIcon
@@ -172,9 +169,9 @@ function Context({
                     </div>
                     <span>{title__CommentIcon}</span>
                   </div>
-                </button>
+                </div>
 
-                <button className={cx("block")} onClick={() => setBook(!book)}>
+                <div className={cx("block")} onClick={() => setBook(!book)}>
                   {book ? (
                     <div className={cx("block__icon")}>
                       <div className={cx("block__icon__btn")}>
@@ -196,30 +193,33 @@ function Context({
                       <span>{title__bookMarkIcon__active}</span>
                     </div>
                   )}
-                </button>
-                <Tippy
-                  hideOnClick={false}
-                  interactive
-                  delay={[0, 500]}
-                  placement="top-start"
-                  render={(attrs) => (
-                    <div className={cx("menu_list")} tabIndex="-1" {...attrs}>
-                      <ShareInformation />
-                    </div>
-                  )}
-                >
-                  <button className={cx("block")}>
-                    <div className={cx("block__icon")}>
-                      <div className={cx("block__icon__btn")}>
-                        <FontAwesomeIcon
-                          className={cx("icon")}
-                          icon={faShare}
-                        />
+                </div>
+                {/*  Using a wrapper <div> tag around the reference element solves this by creating a new parentNode context. */}
+                <div>
+                  <Tippy
+                    hideOnClick={false}
+                    interactive
+                    delay={[0, 500]}
+                    placement="top-start"
+                    render={(attrs) => (
+                      <div className={cx("menu_list")} tabIndex="-1" {...attrs}>
+                        <ShareInformation />
                       </div>
-                      <span>{title__shareIcon}</span>
+                    )}
+                  >
+                    <div className={cx("block")}>
+                      <div className={cx("block__icon")}>
+                        <div className={cx("block__icon__btn")}>
+                          <FontAwesomeIcon
+                            className={cx("icon")}
+                            icon={faShare}
+                          />
+                        </div>
+                        <span>{title__shareIcon}</span>
+                      </div>
                     </div>
-                  </button>
-                </Tippy>
+                  </Tippy>
+                </div>
               </div>
             </div>
           </div>

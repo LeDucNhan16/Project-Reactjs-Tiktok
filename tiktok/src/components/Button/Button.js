@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
+
 import { Link } from "react-router-dom";
 import classNames from "classnames/bind";
-
 import styles from "./Button.module.scss";
+import { useRef } from "react";
 
 const cx = classNames.bind(styles);
 
@@ -23,6 +24,8 @@ function Button({
   ...passProps
 }) {
   let Comp = "button";
+
+  const buttonRef = useRef();
 
   const props = {
     onClick,
@@ -48,9 +51,8 @@ function Button({
     props.href = href;
     Comp = "a";
   }
-
   return (
-    <Comp className={classes} {...props}>
+    <Comp ref={buttonRef} className={classes} {...props}>
       {iconItem && <span className={cx("icon")}>{iconItem}</span>}
       <span className={cx("title")}>{children}</span>
     </Comp>
