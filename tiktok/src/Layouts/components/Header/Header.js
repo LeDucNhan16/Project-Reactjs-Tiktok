@@ -11,7 +11,6 @@ import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
 import "tippy.js/dist/tippy.css";
 import { Link } from "react-router-dom";
-import React from "react";
 
 import styles from "./Header.module.scss";
 import Button from "../../../components/Button/Button";
@@ -344,7 +343,7 @@ function Header() {
                 )}
               >
                 <button className={cx("login_btn")}>
-                  <NotificationIcon />
+                  <NotificationIcon className={cx("notification__icon")} />
                 </button>
               </Tippy>
             </div>

@@ -58,10 +58,14 @@
   margin-right: 10px;
   background-color: transparent;
   cursor: pointer;
+  line-height: 30px;
 
   + .login_btn {
     margin-right: 10px;
     margin-bottom: -5px;
+  }
+  .notification__icon {
+    margin-bottom: -3px;
   }
 }
 

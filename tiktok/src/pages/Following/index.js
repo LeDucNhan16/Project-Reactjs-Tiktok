@@ -12,6 +12,7 @@ import Video7 from "../../assets/Video/4471971202862.mp4";
 import Video8 from "../../assets/Video/4471971205051.mp4";
 import Video9 from "../../assets/Video/4471971203548.mp4";
 import Video10 from "../../assets/Video/4471971204060.mp4";
+import images from "../../assets/Images";
 
 const cx = classNames.bind(styles);
 
@@ -20,7 +21,7 @@ function Following() {
     <div className={cx("wrapper")}>
       <Context
         className="video"
-        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/8420ce3522c89eb4772ef05941411498~c5_100x100.jpeg?x-expires=1687687200&x-signature=eleHEW1VpbxN8BDfRtqSm%2FxlamQ%3D"
+        srcImg={images.images15}
         nameMain="zahu1a"
         nameSub="zuubb . 1d ago"
         titleMain="Hey Siri~~~"
@@ -36,7 +37,7 @@ function Following() {
       />
       <Context
         className="video"
-        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/8420ce3522c89eb4772ef05941411498~c5_100x100.jpeg?x-expires=1687687200&x-signature=eleHEW1VpbxN8BDfRtqSm%2FxlamQ%3D"
+        srcImg={images.images14}
         nameMain="zahu1a"
         nameSub="zuubb . 1d ago"
         titleMain="Hey Siri~~~"
@@ -52,7 +53,7 @@ function Following() {
       />
       <Context
         className="video"
-        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/8420ce3522c89eb4772ef05941411498~c5_100x100.jpeg?x-expires=1687687200&x-signature=eleHEW1VpbxN8BDfRtqSm%2FxlamQ%3D"
+        srcImg={images.images13}
         nameMain="zahu1a"
         nameSub="zuubb . 1d ago"
         titleMain="Hey Siri~~~"
@@ -68,7 +69,7 @@ function Following() {
       />
       <Context
         className="video"
-        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/8420ce3522c89eb4772ef05941411498~c5_100x100.jpeg?x-expires=1687687200&x-signature=eleHEW1VpbxN8BDfRtqSm%2FxlamQ%3D"
+        srcImg={images.images12}
         nameMain="zahu1a"
         nameSub="zuubb . 1d ago"
         titleMain="Hey Siri~~~"
@@ -84,7 +85,7 @@ function Following() {
       />
       <Context
         className="video"
-        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/8420ce3522c89eb4772ef05941411498~c5_100x100.jpeg?x-expires=1687687200&x-signature=eleHEW1VpbxN8BDfRtqSm%2FxlamQ%3D"
+        srcImg={images.images11}
         nameMain="nhanlee"
         nameSub="nhanlees . 1d ago"
         titleMain="Hey Siri~~~"
@@ -99,7 +100,7 @@ function Following() {
         title__shareIcon="56"
       />
       <Context
-        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/8420ce3522c89eb4772ef05941411498~c5_100x100.jpeg?x-expires=1687687200&x-signature=eleHEW1VpbxN8BDfRtqSm%2FxlamQ%3D"
+        srcImg={images.images10}
         nameMain="zahu1a"
         nameSub="zuubb . 1d ago"
         titleMain="Hey Siri~~~"
@@ -115,7 +116,7 @@ function Following() {
         btn__Following={true}
       />
       <Context
-        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/d6c61413a00b4d2e36e62c24d377d1ba~c5_100x100.jpeg?x-expires=1687690800&x-signature=iaRYSW%2FX2R20SkwLPUOkGqDQft0%3D"
+        srcImg={images.images9}
         nameMain="phuthep6688"
         nameSub="Phú Thép 🐲"
         titleMain="Trong 12 con giáp rồng được ví như 1 vị vua thầm lặng "
@@ -131,7 +132,7 @@ function Following() {
         btn__Following={true}
       />
       <Context
-        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/d6c61413a00b4d2e36e62c24d377d1ba~c5_100x100.jpeg?x-expires=1687690800&x-signature=iaRYSW%2FX2R20SkwLPUOkGqDQft0%3D"
+        srcImg={images.images8}
         nameMain="truongxuannguyenn"
         nameSub="Trương Nguyên🧨"
         titleMain="TCũng báo lắm nha😂"
@@ -147,7 +148,7 @@ function Following() {
         btn__Following={true}
       />
       <Context
-        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/d6c61413a00b4d2e36e62c24d377d1ba~c5_100x100.jpeg?x-expires=1687690800&x-signature=iaRYSW%2FX2R20SkwLPUOkGqDQft0%3D"
+        srcImg={images.images1}
         nameMain="choinghigiaan"
         nameSub="Chòi nghỉ sân vườn"
         titleMain="Mái nhôm cuốn sang trọng giá bằng nửa tháng lương "
@@ -163,7 +164,7 @@ function Following() {
         btn__Following={true}
       />
       <Context
-        srcImg="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/d6c61413a00b4d2e36e62c24d377d1ba~c5_100x100.jpeg?x-expires=1687690800&x-signature=iaRYSW%2FX2R20SkwLPUOkGqDQft0%3D"
+        srcImg={images.images2}
         nameMain="Nguyễn Bích Uyển My"
         nameSub="Sangvo34563"
         titleMain="Trong 12 con giáp rồng được ví như 1 vị vua thầm lặng  Vụ đánh ghen ở Trung Văn Hà Nội, đập nát kính ô tô, yêu mí ông bà ghê, vừa cản chị vợ vừa đưa bao tay, mũ bảo hiểm cho chị ấy "
