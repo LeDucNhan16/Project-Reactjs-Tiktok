@@ -9,6 +9,7 @@ const routers = {
   Coin: "/coin",
   Setting: "/setting",
   Message: "/message",
+  HelpPage: "/helpPage",
 };
 
 export default routers;

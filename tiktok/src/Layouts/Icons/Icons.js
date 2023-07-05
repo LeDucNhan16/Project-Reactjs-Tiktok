@@ -1240,3 +1240,34 @@ export const DatedownIcon = ({
     ></path>
   </svg>
 );
+
+export const ChevronRightIcon = ({
+  className,
+  width = "2rem",
+  height = "2rem",
+}) => (
+  <svg
+    className={className}
+    width={width}
+    height={height}
+    viewBox="0 0 48 48"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M43.4142 22.5858L27.1213 6.29289C26.7308 5.90237 26.0976 5.90237 25.7071 6.29289L24.2929 7.70711C23.9024 8.09763 23.9024 8.7308 24.2929 9.12132L39.1716 24L24.2929 38.8787C23.9024 39.2692 23.9024 39.9024 24.2929 40.2929L25.7071 41.7071C26.0976 42.0976 26.7308 42.0976 27.1213 41.7071L43.4142 25.4142C44.1953 24.6332 44.1953 23.3668 43.4142 22.5858Z"
+    ></path>
+  </svg>
+);
+
+export const ImageIcon = ({ className, width = "2rem", height = "2rem" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    width={width}
+    height={height}
+    fill="currentColor"
+  ></svg>
+);

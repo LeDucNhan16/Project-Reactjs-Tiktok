@@ -169,7 +169,7 @@ const MENU_ITEMS = [
   {
     icon: <HelpFeedbackIcon />,
     title: "Feedback and help",
-    to: "https://www.tiktok.com/feedback",
+    to: config.routers.HelpPage,
   },
   {
     icon: <KeyboardShortcutsIcon />,

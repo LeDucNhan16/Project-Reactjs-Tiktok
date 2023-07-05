@@ -10,7 +10,7 @@ import Discovery from "../pages/Discovery";
 import Coin from "../pages/Coin";
 import Setting from "../pages/Setting";
 import Message from "../pages/Message";
-
+import HelpPage from "../pages/HelpPage/Help";
 //
 const publicRoutes = [
   { path: config.routers.Home, component: Home },
@@ -20,6 +20,7 @@ const publicRoutes = [
   { path: config.routers.Profile, component: Profile },
   { path: config.routers.Search, component: Search, layout: null },
   { path: config.routers.Upload, component: Upload, layout: HeaderOnly },
+  { path: config.routers.HelpPage, component: HelpPage, layout: HeaderOnly },
   { path: config.routers.Coin, component: Coin, layout: HeaderOnly },
   {
     path: config.routers.Setting,

@@ -15,6 +15,11 @@ const images = {
   images13: require("./z4481843568999_5bfca6a270ed86e44ac2aca0802ca093.jpg"),
   images14: require("./z4481843564932_b7c8968533d79aed08b6954ba6d1b54d.jpg"),
   images15: require("./z4481843564230_a5d1d18332f633d53a1e4a0003327090.jpg"),
+  imagesLogo1: require("./z4489222879288_e8d59cd0b35be5586002a963f7f6eff4.jpg"),
+  imagesLogo2: require("./z4489222862877_d5beeb4ceed682cca7c73f4b69d7cd05.jpg"),
+  imagesLogo3: require("./z4489222862776_5386c9d5df84d69806024608bfea0704.jpg"),
+  imagesLogo4: require("./z4489222852030_f7f2fb7f91078770a93ced29988589a2.jpg"),
+  imagesLogo5: require("./z4489222846978_2c0f0c2269022e2e5fdf29e704f03157.jpg"),
 };
 
 export default images;
