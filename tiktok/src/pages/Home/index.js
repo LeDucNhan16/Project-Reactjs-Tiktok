@@ -114,6 +114,7 @@ function Home() {
         title__bookMarkIcon="295"
         title__bookMarkIcon__active="294"
         title__shareIcon="56"
+        btn__Following={true}
       />
       <Context
         className="video"
@@ -130,6 +131,7 @@ function Home() {
         title__bookMarkIcon="295"
         title__bookMarkIcon__active="294"
         title__shareIcon="56"
+        btn__Following={true}
       />
       <Context
         className="video"
@@ -146,6 +148,7 @@ function Home() {
         title__bookMarkIcon="295"
         title__bookMarkIcon__active="294"
         title__shareIcon="56"
+        btn__Following={true}
       />
       <Context
         className="video"
@@ -162,6 +165,7 @@ function Home() {
         title__bookMarkIcon="295"
         title__bookMarkIcon__active="294"
         title__shareIcon="56"
+        btn__Following={true}
       />
       <Context
         className="video"
@@ -178,6 +182,7 @@ function Home() {
         title__bookMarkIcon="295"
         title__bookMarkIcon__active="294"
         title__shareIcon="56"
+        btn__Following={true}
       />
     </div>
   );

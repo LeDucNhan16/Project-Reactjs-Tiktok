@@ -49,6 +49,7 @@ function Context({
     const optionsMemo = useMemo(() => {
       return options;
     }, [options]);
+
     useEffect(() => {
       const observer = new IntersectionObserver(callbackFunction, optionsMemo);
       const currentTarget = targetRef.current;
@@ -75,6 +76,7 @@ function Context({
     rootMargin: "0px",
     threshold: 0.3,
   };
+
   const isVisible = useElementOnScreen(options, videoRef);
 
   useEffect(() => {
