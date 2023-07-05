@@ -67,8 +67,8 @@
         box-shadow: 2px 4px 20px rgba(80, 102, 102, 0.2);
         margin-left: 54px;
         overflow: hidden;
-        min-height: 600px;
-        margin-top: 50px;
+        min-height: 760px;
+        margin-top: 55px;
 
         h2 {
           margin-top: 40px;
@@ -77,15 +77,21 @@
         }
 
         .context__title {
+          padding: 10px 0;
+          margin: 15px 0;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin: 20px 0;
           cursor: pointer;
+
+          h3 {
+            font-size: 1.4rem;
+          }
         }
         ul {
           li {
             opacity: 0.6;
+            font-size: 1.4rem;
           }
 
           .context__lists {

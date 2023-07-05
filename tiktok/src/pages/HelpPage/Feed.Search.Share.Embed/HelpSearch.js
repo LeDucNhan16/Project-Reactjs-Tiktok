@@ -1,11 +1,10 @@
 import classNames from "classnames/bind";
-import "react-tabs/style/react-tabs.scss";
 
-import styles from "../HelpPage/Help.module.scss";
-import { ChevronRightIcon } from "../../Layouts/Icons/Icons";
-import Button from "../../components/Button/Button";
+import styles from "../Help.module.scss";
+import { ChevronRightIcon } from "../../../Layouts/Icons/Icons";
+import Button from "../../../components/Button/Button";
 import { useState } from "react";
-import HelpOther from "../HelpPage/HelpOther/HelpOther";
+import HelpOther from "../HelpOther/HelpOther";
 
 const cx = classNames.bind(styles);
 

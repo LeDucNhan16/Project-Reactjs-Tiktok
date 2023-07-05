@@ -17,6 +17,7 @@ import AbuseReport from "./AbuseReport";
 import Balance from "./Balance/Balance";
 import Image from "../../Image/Image";
 import images from "../../assets/Images";
+import FeedSrearchShareEmbad from "./Feed.Search.Share.Embed";
 
 const cx = classNames.bind(styles);
 
@@ -41,6 +42,9 @@ function HelpPage() {
               <span>Creator tools</span> <ChevronRightIcon />
             </Tab>
 
+            <Tab className={cx("directional")}>
+              <span>Feed/Search/Share/Embed</span> <ChevronRightIcon />
+            </Tab>
             <Tab className={cx("directional")}>
               <span>Video and Sound</span> <ChevronRightIcon />
             </Tab>
@@ -100,6 +104,11 @@ function HelpPage() {
           {/* Creator tools */}
           <TabPanel>
             <CreatorTools />
+          </TabPanel>
+
+          {/* Feed/Search/Share/Embed */}
+          <TabPanel>
+            <FeedSrearchShareEmbad />
           </TabPanel>
 
           {/* Feed/Search/Share/Embed */}
@@ -184,7 +193,7 @@ function HelpPage() {
       <div className={cx("download__web")}>
         <h1>Download now</h1>
         <div className={cx("download__web__logo")}>
-          <Button>
+          <Button href="https://apps.microsoft.com/store/detail/tiktok/9NH2GPH4JZS4?hl=zh-hk&gl=hk&rtc=1">
             <Image className={cx("img")} src={images.imagesLogo1} />
           </Button>
           <Button
