@@ -129,12 +129,12 @@ function Context({
           <div className={cx("video__main")}>
             <video
               ref={videoRef}
-              controls
               onClick={handleVideo}
+              src={srcVideo}
+              controls
+              loop
               className={cx("video__main__video")}
-            >
-              <source src={srcVideo} />
-            </video>
+            />
             <div className={cx("video__main__navigation")}>
               <div className={cx("navigation__sub")}>
                 <div className={cx("block")} onClick={() => setHeart(!heart)}>

@@ -120,9 +120,9 @@ function Home() {
         className="video"
         srcImg={images.images7}
         nameMain="zahu1a"
-        nameSub="zuubb . 1d ago"
-        titleMain="Hey Siri~~~"
-        titleId="#xuhuong"
+        nameSub="Đặng Long Phi"
+        titleMain="Trả lời @Thanh Nguyễn Tiểu phẫu-Filler phần 2 cũng là phần cuối của e đây phê quá trời"
+        titleId="##FoodFestOnTikTok #ráytaikhủng #xuhuong2023 #TikTokGiaiTri #danglongphi"
         titleMusic="Cô nàng AI"
         srcVideo={Video7}
         title__active__HeartIcon="935"
@@ -136,10 +136,10 @@ function Home() {
       <Context
         className="video"
         srcImg={images.images8}
-        nameMain="zahu1a"
-        nameSub="zuubb . 1d ago"
-        titleMain="Hey Siri~~~"
-        titleId="#xuhuong"
+        nameMain="theanh28trending"
+        nameSub="THEANH28 TRENDING"
+        titleMain="MỘT KHOẢNG KHẮC HAI SỐ PHẬN"
+        titleId="##theanh28 #theanh28trending #titoknews"
         titleMusic="Cô nàng AI"
         srcVideo={Video8}
         title__active__HeartIcon="999"
@@ -154,9 +154,9 @@ function Home() {
         className="video"
         srcImg={images.images9}
         nameMain="zahu1a"
-        nameSub="zuubb . 1d ago"
-        titleMain="Hey Siri~~~"
-        titleId="#xuhuong"
+        nameSub="thaygiaoba"
+        titleMain="Dậy thì thành cong"
+        titleId="#gei #tomboy #xuhuong"
         titleMusic="Cô nàng AI"
         srcVideo={Video9}
         title__active__HeartIcon="2002"
@@ -171,8 +171,8 @@ function Home() {
         className="video"
         srcImg={images.images10}
         nameMain="nhanlee"
-        nameSub="nhanlees . 1d ago"
-        titleMain="Hey Siri~~~"
+        nameSub="xuhuongTrend"
+        titleMain=" #Cách chữa cháy cho gấu quần bị cắt ngắn và có thể áp dụng khi lên gấu quần bò mà muốn giữ lại gấu nha mọi người😅chắc bạn khách của mình định tiết kiệm tiền đi uống trà sữa kkkk"
         titleId="#xuhuongTrend"
         titleMusic="Cô nàng AI"
         srcVideo={Video10}

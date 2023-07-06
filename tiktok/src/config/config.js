@@ -10,6 +10,7 @@ const routers = {
   Setting: "/setting",
   Message: "/message",
   HelpPage: "/helpPage",
+  VideoPage: "/videoPage",
 };
 
 export default routers;

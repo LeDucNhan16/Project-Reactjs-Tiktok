@@ -11,6 +11,8 @@ import Coin from "../pages/Coin";
 import Setting from "../pages/Setting";
 import Message from "../pages/Message";
 import HelpPage from "../pages/HelpPage/Help";
+import VideoPage from "../pages/VideoMainPage/VideoPage";
+import MainOnly from "../Layouts/MainOnly/MainOnly";
 //
 const publicRoutes = [
   { path: config.routers.Home, component: Home },
@@ -31,6 +33,11 @@ const publicRoutes = [
     path: config.routers.Message,
     component: Message,
     layout: HeaderOnly,
+  },
+  {
+    path: config.routers.VideoPage,
+    component: VideoPage,
+    layout: MainOnly,
   },
 ];
 
