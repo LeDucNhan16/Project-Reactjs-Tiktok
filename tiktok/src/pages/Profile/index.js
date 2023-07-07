@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.scss";
 import Tippy from "@tippyjs/react/headless";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import video from "../../assets/Video/4459531380904.mp4";
 import video1 from "../../assets/Video/3720204937674537429.mp4";
@@ -27,6 +28,7 @@ import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import Button from "../../components/Button/Button";
 
 import ShareInformation from "../../components/ShareInformation/ShareInformation";
+import config from "../../config";
 
 const cx = classNames.bind(styles);
 
@@ -40,6 +42,7 @@ function Profile() {
   const handleMountSettingMessage = () => {
     setShowSettingMessage(false);
   };
+
   return (
     <div className={cx("wrapper")}>
       <div className={cx("head")}>
@@ -117,30 +120,78 @@ function Profile() {
         <div className={cx("body")}>
           <TabPanel className={cx("context")}>
             <div className={cx("context__block")}>
-              <video className={cx("video")} src={video} autoPlay controls />
-              <video className={cx("video")} src={video1} controls />
-              <video className={cx("video")} src={video2} controls />
-              <video className={cx("video")} src={video3} controls />
-              <video className={cx("video")} src={video4} controls />
-              <video className={cx("video")} src={video5} controls />
-              <video className={cx("video")} src={video8} controls />
-              <video className={cx("video")} src={video6} controls />
-              <video className={cx("video")} src={video7} controls />
-              <video className={cx("video")} src={video1} controls />
-              <video className={cx("video")} src={video2} controls />
-              <video className={cx("video")} src={video3} controls />
-              <video className={cx("video")} src={video4} controls />
-              <video className={cx("video")} src={video4} controls />
-              <video className={cx("video")} src={video5} controls />
-              <video className={cx("video")} src={video8} controls />
-              <video className={cx("video")} src={video6} controls />
-              <video className={cx("video")} src={video7} controls />
-              <video className={cx("video")} src={video1} controls />
-              <video className={cx("video")} src={video3} controls />
-              <video className={cx("video")} src={video4} controls />
-              <video className={cx("video")} src={video4} controls />
-              <video className={cx("video")} src={video5} controls />
-              <video className={cx("video")} src={video8} controls />
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video} autoPlay controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video1} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video2} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video3} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video4} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video5} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video8} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video6} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video7} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video1} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video2} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video3} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video4} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video4} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video5} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video8} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video6} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video7} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video1} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video3} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video4} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video4} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video5} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video8} controls />
+              </Link>
             </div>
           </TabPanel>
           <TabPanel className={cx("context")}>
@@ -150,30 +201,78 @@ function Profile() {
           </TabPanel>
           <TabPanel className={cx("context")}>
             <div className={cx("context__block")}>
-              <video className={cx("video")} autoPlay src={video6} controls />
-              <video className={cx("video")} src={video7} controls />
-              <video className={cx("video")} src={video1} controls />
-              <video className={cx("video")} src={video2} controls />
-              <video className={cx("video")} src={video3} controls />
-              <video className={cx("video")} src={video4} controls />
-              <video className={cx("video")} src={video4} controls />
-              <video className={cx("video")} src={video5} controls />
-              <video className={cx("video")} src={video8} controls />
-              <video className={cx("video")} src={video6} controls />
-              <video className={cx("video")} src={video7} controls />
-              <video className={cx("video")} src={video1} controls />
-              <video className={cx("video")} src={video} controls />
-              <video className={cx("video")} src={video1} controls />
-              <video className={cx("video")} src={video2} controls />
-              <video className={cx("video")} src={video3} controls />
-              <video className={cx("video")} src={video4} controls />
-              <video className={cx("video")} src={video5} controls />
-              <video className={cx("video")} src={video8} controls />
-              <video className={cx("video")} src={video3} controls />
-              <video className={cx("video")} src={video4} controls />
-              <video className={cx("video")} src={video4} controls />
-              <video className={cx("video")} src={video5} controls />
-              <video className={cx("video")} src={video8} controls />
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} autoPlay src={video6} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video7} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video1} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video2} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video3} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video4} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video4} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video5} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video8} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video6} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video7} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video1} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video1} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video2} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video3} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video4} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video5} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video8} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video3} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video4} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video4} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video5} controls />
+              </Link>
+              <Link to={config.routers.VideoPage}>
+                <video className={cx("video")} src={video8} controls />
+              </Link>
             </div>
           </TabPanel>
         </div>

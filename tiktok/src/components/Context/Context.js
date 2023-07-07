@@ -8,7 +8,9 @@ import {
   faShare,
 } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react/headless";
+import { Link } from "react-router-dom";
 
+import config from "../../config/config";
 import Image from "../../Image/Image";
 import styles from "./Context.module.scss";
 import Button from "../Button/Button";
@@ -33,7 +35,7 @@ function Context({
   title__shareIcon,
   title__bookMarkIcon__active,
 }) {
-  const [heart, setHeart] = useState(true);
+  const [heart, setHeart] = useState(false);
   const [book, setBook] = useState(false);
   const [follow, setFollow] = useState(true);
   const [playing, setPlaying] = useState(false);
@@ -127,14 +129,16 @@ function Context({
           </div>
 
           <div className={cx("video__main")}>
-            <video
-              ref={videoRef}
-              onClick={handleVideo}
-              src={srcVideo}
-              controls
-              loop
-              className={cx("video__main__video")}
-            />
+            <Link to={config.VideoPage}>
+              <video
+                ref={videoRef}
+                onClick={handleVideo}
+                src={srcVideo}
+                controls
+                loop
+                className={cx("video__main__video")}
+              />
+            </Link>
             <div className={cx("video__main__navigation")}>
               <div className={cx("navigation__sub")}>
                 <div className={cx("block")} onClick={() => setHeart(!heart)}>
@@ -163,12 +167,15 @@ function Context({
 
                 <div className={cx("block")}>
                   <div className={cx("block__icon")}>
-                    <div className={cx("block__icon__btn")}>
+                    <Link
+                      to={config.VideoPage}
+                      className={cx("block__icon__btn")}
+                    >
                       <FontAwesomeIcon
                         className={cx("icon")}
                         icon={faCommentDots}
                       />
-                    </div>
+                    </Link>
                     <span>{title__CommentIcon}</span>
                   </div>
                 </div>

@@ -7,9 +7,9 @@ import Image from "../../Image/Image";
 
 const cx = classNames.bind(styles);
 
-function ShowVideoImages({ src, title, img, name, imgSub, heart }) {
+function ShowVideoImages({ src, onClick, title, img, name, imgSub, heart }) {
   return (
-    <Link src={src} className={cx("block")}>
+    <Link to={src} onClick={onClick} className={cx("block")}>
       <div className={cx("block__img")}>
         <Image className={cx("img")} src={img} />
       </div>

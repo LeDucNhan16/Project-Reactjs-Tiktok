@@ -33,7 +33,7 @@
       .btn__erase {
         width: 46px;
         height: 46px;
-        margin: 0 30px 0 20px;
+        margin: 0 55px 0 20px;
         background-color: #ccc;
         border-radius: 50%;
 
@@ -307,7 +307,7 @@
 
   // comment video
   .comment {
-    max-height: min(100vh - 100px);
+    max-height: min(100vh - 410px);
     overflow-y: auto;
     margin-top: 20px;
     border-top: 1px solid #ddd;

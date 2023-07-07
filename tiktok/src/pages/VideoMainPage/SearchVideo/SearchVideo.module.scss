@@ -33,7 +33,7 @@
   }
 
   &:focus-within {
-    border: 1.5px solid rgba(22, 24, 35, 0.2);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
   }
 }
 .search_title {
@@ -49,7 +49,7 @@
   right: calc(52px + 16px);
   transform: translateY(-50%);
   position: absolute;
-  color: rgba(22, 24, 35, 0.34);
+  color: white;
   cursor: pointer;
 }
 
