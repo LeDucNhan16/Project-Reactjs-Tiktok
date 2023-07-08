@@ -510,12 +510,15 @@ function Coin() {
               <form>
                 <div className={cx("selects")}>
                   <div className={cx("name")}>
-                    <div
-                      onClick={handleShowMomo}
-                      className={cx("select__name")}
-                    >
-                      <input type="radio" id="huey" name="drone" value="huey" />
-                      <label for="huey">MoMo</label>
+                    <div className={cx("select__name")}>
+                      <input
+                        onClick={handleShowMomo}
+                        type="radio"
+                        id="huey"
+                        name="drone"
+                        value="huey"
+                      />
+                      <label htmlFor="huey">MoMo</label>
                     </div>
                     <div className={cx("select__img")}>
                       <Image
@@ -537,15 +540,16 @@ function Coin() {
                   )}
                 </div>
                 <div className={cx("selects")}>
-                  <div onClick={handleMountCardandMomo} className={cx("name")}>
+                  <div className={cx("name")}>
                     <div className={cx("select__name")}>
                       <input
+                        onClick={handleMountCardandMomo}
                         type="radio"
                         id="dewey"
                         name="drone"
                         value="dewey"
                       />
-                      <label for="dewey">ZaloPay</label>
+                      <label htmlFor="dewey">ZaloPay</label>
                     </div>
                     <div className={cx("select__img")}>
                       <Image
@@ -558,17 +562,15 @@ function Coin() {
                 </div>
                 <div className={cx("selects")}>
                   <div className={cx("name")}>
-                    <div
-                      onClick={handleShowCard}
-                      className={cx("select__name")}
-                    >
+                    <div className={cx("select__name")}>
                       <input
+                        onClick={handleShowCard}
                         type="radio"
                         id="louie"
                         name="drone"
                         value="louie"
                       />
-                      <label for="louie">Credit / debit card</label>
+                      <label htmlFor="louie">Credit / debit card</label>
                     </div>
                     <div className={cx("select__img")}>
                       <Image
@@ -622,7 +624,7 @@ function Coin() {
                       </div>
                       <div className={cx("context__card__tick")}>
                         <input id="checkbox" value="checkbox" type="checkbox" />
-                        <label for="checkbox">
+                        <label htmlFor="checkbox">
                           Save the information for future use
                         </label>
                       </div>
@@ -638,7 +640,7 @@ function Coin() {
                         name="drone"
                         value="dewey"
                       />
-                      <label for="bank">Bank transfer</label>
+                      <label htmlFor="bank">Bank transfer</label>
                     </div>
                     <div className={cx("select__img")}>
                       <Image
