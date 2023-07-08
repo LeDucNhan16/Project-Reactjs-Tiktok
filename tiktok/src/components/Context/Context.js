@@ -84,8 +84,8 @@ function Context({
   useEffect(() => {
     if (isVisible) {
       if (!playing) {
-        videoRef.current.play();
         setPlaying(true);
+        videoRef.current.play();
       }
     } else {
       if (playing) {
@@ -110,7 +110,7 @@ function Context({
               <p className={cx("title")}>{titleMain}</p>
               <nav className={cx("title__nav")}>{titleId}</nav>
               <div className={cx("music")}>
-                <span>Nhạc Nền - </span>
+                <span>Soundtrack - </span>
                 <span className={cx("music__btn")}>{titleMusic}</span>
               </div>
             </div>
@@ -131,6 +131,7 @@ function Context({
           <div className={cx("video__main")}>
             <Link to={config.VideoPage}>
               <video
+                muted={false}
                 ref={videoRef}
                 onClick={handleVideo}
                 src={srcVideo}

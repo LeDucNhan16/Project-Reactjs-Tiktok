@@ -24,14 +24,14 @@ function Comment({
     <div className={cx("comment__name")}>
       <Image src={images} />
       <div className={cx("title__comment")}>
-        <h3>{name}</h3>
+        <h4>{name}</h4>
         <span>{title}</span>
         <div className={cx("feedback")}>
           <span>{timeComment} ago</span>
           <button className={cx("feedback__btn")}>Reply</button>
         </div>
         <button className={cx("more__feedback")}>
-          View more replies ({moreComment}) <ArrowBottomIcon />
+          View {moreComment} replies <ArrowBottomIcon />
         </button>
       </div>
       <div onClick={() => setShow(!show)} className={cx("favourite")}>

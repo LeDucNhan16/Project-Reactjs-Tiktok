@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.scss";
 
 import {
-  DatedownIcon,
+  DataDownIcon,
   SettingIcon,
   UserIcon,
   WatchIcon,
@@ -65,7 +65,7 @@ function Nav__Date() {
           <div className={cx("content__main")}>
             <h4>Select file format</h4>
             <div className={cx("content__main__icon")}>
-              <DatedownIcon className={cx("data__icon")} />
+              <DataDownIcon className={cx("data__icon")} />
               <ul>
                 <p>TXT</p>
                 <span>Easy-to-read text file</span>
@@ -73,7 +73,7 @@ function Nav__Date() {
               <input name="date" type="radio" />
             </div>
             <div className={cx("content__main__icon")}>
-              <DatedownIcon className={cx("data__icon")} />
+              <DataDownIcon className={cx("data__icon")} />
               <ul>
                 <p for="json">JSON</p>
                 <span>Machine-readable file</span>
@@ -88,7 +88,7 @@ function Nav__Date() {
       </TabPanel>
       <TabPanel className={cx("tabs__sub")}>
         <div className={cx("content__download")}>
-          <DatedownIcon className={cx("date__con__giant")} />
+          <DataDownIcon className={cx("date__con__giant")} />
           <p>No data file requests yet</p>
           <span>You have not requested a data file yet. </span>
         </div>

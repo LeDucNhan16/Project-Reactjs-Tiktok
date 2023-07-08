@@ -690,7 +690,7 @@ function Video({
               className={cx("btn__following")}
             >
               {follow ? (
-                <Button primary>Follow</Button>
+                <Button primaryRed>Follow</Button>
               ) : (
                 <Button primaryActive>Following</Button>
               )}

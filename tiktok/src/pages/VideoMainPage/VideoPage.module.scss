@@ -31,11 +31,15 @@
       justify-content: space-between;
 
       .btn__erase {
-        width: 46px;
-        height: 46px;
+        width: 40px;
+        height: 40px;
         margin: 0 55px 0 20px;
-        background-color: #ccc;
+        background-color: rgba(84, 84, 84, 0.5);
         border-radius: 50%;
+
+        &:hover {
+          background-color: rgba(37, 37, 37, 0.6);
+        }
 
         .btn__icon {
           margin: 9.5px;
@@ -44,13 +48,25 @@
 
       .reports {
         padding: 10px 15px;
-        background-color: #ccc;
+        background-color: rgba(84, 84, 84, 0.5);
         margin-right: 20px;
         border-radius: 99px;
         cursor: pointer;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: rgba(37, 37, 37, 0.6);
+        }
+
+        .svg-inline--fa.fa-flag {
+          width: 12px;
+        }
 
         .reports__title {
-          margin-left: 10px;
+          margin-left: 5px;
+          font-size: 1.4rem;
         }
       }
     }
@@ -110,7 +126,7 @@
             }
           }
           span {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-left: 5px;
             font-weight: 600;
           }
@@ -238,9 +254,9 @@
 
     .music {
       margin: 10px 0;
-      font-weight: 600;
       display: block;
       background-color: transparent;
+      font-size: 1.5rem;
 
       .icon {
         margin-right: 10px;
@@ -352,10 +368,11 @@
 
       .more__feedback {
         margin-top: 10px;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         opacity: 0.6;
         display: flex;
         align-items: center;
+        font-weight: 600;
       }
 
       .favourite {

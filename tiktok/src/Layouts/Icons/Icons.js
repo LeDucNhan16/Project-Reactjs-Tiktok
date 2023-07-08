@@ -1104,8 +1104,8 @@ export const PinterestIcon = ({
 
 export const ArrowRightIcon = ({
   className,
-  width = "3rem",
-  height = "3rem",
+  width = "2.5rem",
+  height = "2.5rem",
 }) => (
   <svg
     className={className}
@@ -1219,7 +1219,7 @@ export const WatchIcon = ({ className, width = "2rem", height = "2rem" }) => (
   </svg>
 );
 
-export const DatedownIcon = ({
+export const DataDownIcon = ({
   className,
   width = "2rem",
   height = "2rem",
@@ -1346,11 +1346,7 @@ export const SmileIcon = ({ className, width = "2rem", height = "2rem" }) => (
   </svg>
 );
 
-export const EraseIcon = ({
-  className,
-  width = "2.5rem",
-  height = "2.5rem",
-}) => (
+export const EraseIcon = ({ className, width = "2rem", height = "2rem" }) => (
   <svg
     className={className}
     width={width}

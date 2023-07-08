@@ -8,8 +8,9 @@ const cx = classNames.bind(styles);
 function MenuItem({ data, onClick }) {
   return (
     <Button className={cx("menu__items")} to={data.to} onClick={onClick}>
-      <span>
-        {data.title} {data.icon}
+      <span className={cx("menu__items__list")}>
+        {data.title}
+        {data.icon}
       </span>
     </Button>
   );
