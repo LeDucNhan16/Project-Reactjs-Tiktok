@@ -75,7 +75,7 @@ function Nav__Date() {
             <div className={cx("content__main__icon")}>
               <DataDownIcon className={cx("data__icon")} />
               <ul>
-                <p for="json">JSON</p>
+                <p htmlFor="json">JSON</p>
                 <span>Machine-readable file</span>
               </ul>
               <input name="date" type="radio" />

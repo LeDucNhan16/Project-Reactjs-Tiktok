@@ -102,15 +102,15 @@ function Profile() {
       <Tabs className={cx("main")}>
         <TabList className={cx("nav")}>
           <Tab className={cx("nav__items")}>
+            <span>Video</span>
+          </Tab>
+          <Tab className={cx("nav__items")}>
             <span>
               <LockActiveIcon className={cx("nav__items__icon")} />
               Favorites
             </span>
           </Tab>
-          <Tab className={cx("nav__items", "active")}>
-            <span>Video</span>
-          </Tab>
-          <Tab className={cx("nav__items")}>
+          <Tab className={cx("nav__items")} id="3">
             <span>
               <LockActiveIcon className={cx("nav__items__icon")} />
               Liked
@@ -119,9 +119,20 @@ function Profile() {
         </TabList>
         <div className={cx("body")}>
           <TabPanel className={cx("context")}>
+            <HugeUserIcon className={cx("icon__your")} />
+            <h2>Upload your first video</h2>
+            <span>Your videos will appear here</span>
+          </TabPanel>
+          <TabPanel className={cx("context")}>
             <div className={cx("context__block")}>
               <Link to={config.routers.VideoPage}>
-                <video className={cx("video")} src={video} autoPlay controls />
+                <video
+                  className={cx("video")}
+                  src={video}
+                  autoPlay
+                  controls
+                  muted={true}
+                />
               </Link>
               <Link to={config.routers.VideoPage}>
                 <video className={cx("video")} src={video1} controls />
@@ -194,11 +205,7 @@ function Profile() {
               </Link>
             </div>
           </TabPanel>
-          <TabPanel className={cx("context")}>
-            <HugeUserIcon className={cx("icon__your")} />
-            <h2>Upload your first video</h2>
-            <span>Your videos will appear here</span>
-          </TabPanel>
+
           <TabPanel className={cx("context")}>
             <div className={cx("context__block")}>
               <Link to={config.routers.VideoPage}>

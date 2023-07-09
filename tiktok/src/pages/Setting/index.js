@@ -18,6 +18,7 @@ import config from "../../config/index";
 import Button from "../../components/Button/Button";
 import NavAccounts from "./Nav__Accounts";
 import Nav__Date from "./Nav__Date";
+import images from "../../assets/Images";
 
 const cx = classNames.bind(styles);
 
@@ -197,76 +198,76 @@ function Setting() {
                 <BackIcon className={cx("icon__back")} /> Blocked accounts
               </h2>
               <NavAccounts
-                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/7225779074543026182~c5_100x100.jpeg?x-expires=1688378400&x-signature=kCbeXMPcgginKsr4S2E7y8e%2F3MQ%3D"
                 title="xiao.chao.meng"
+                src={images.images1}
                 seeMore="Video: 97 Followers : 213213"
-                titleSub="👆🏻Follow me👆🏻
+                titleSub="
               https://www.youtube.com/@xiao_chao_meng"
               />
               <NavAccounts
-                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/96e9039064dd51f4d83c655403614f26.jpeg?x-expires=1688378400&x-signature=4QFMMkfTCLhv9QVRixjVk0xMKO4%3D"
                 title="aniviaBr5"
+                src={images.images2}
                 seeMore="Video: 324 Followers : 3213"
                 titleSub="Main Anivia SP vui là chính . Thích Mô hình"
               />
               <NavAccounts
-                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/fe2818f9635b3ffe3c874fc0bc53ec0e~c5_100x100.jpeg?x-expires=1688378400&x-signature=cYVov7O3lrAygw3qXfXptTKDTGU%3D"
                 title="hoazed_neverdie"
+                src={images.images3}
                 seeMore="Video: 27 Followers : 6553"
                 titleSub="
               https://www.youtube.com/@x23o_chao_meng"
               />
               <NavAccounts
-                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/84fbb416d86a8e984debbaab6efb170c.jpeg?x-expires=1688378400&x-signature=uVi3ak82JgqdNAf%2FNd2P33mzl6o%3D"
                 title="thanhgrakmonter"
+                src={images.images4}
                 seeMore="Video: 24 Followers : 34213"
                 titleSub="—————-ANWIR—————-"
               />
               <NavAccounts
-                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/de9cea1b7ad8184c7a03c7f07f41d86a~c5_100x100.jpeg?x-expires=1688378400&x-signature=MdnUlU8jXncSuaniLeJmfjC4jn8%3D"
                 title="xiem_123"
+                src={images.images5}
                 seeMore="Video: 57 Followers : 3683"
               />
               <NavAccounts
-                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/7225779074543026182~c5_100x100.jpeg?x-expires=1688378400&x-signature=kCbeXMPcgginKsr4S2E7y8e%2F3MQ%3D"
                 title="xiaochanggnae"
+                src={images.images6}
                 seeMore="Video: 97 Followers : 213213"
                 titleSub="Contact work : 0922948640"
               />
               <NavAccounts
-                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/2609d2f365a6ea61623559b29b0f4924~c5_100x100.jpeg?x-expires=1688378400&x-signature=T%2FN61oJemAeXL%2BGrN84UNTCCHHY%3D"
                 title="bacthaysongam"
+                src={images.images7}
                 seeMore="Video: 97 Followers : 63700"
                 titleSub="Clips of Legue Of legends
               👇Edit 👇
               contact :tuyenbnbn12@gmail.com"
               />
               <NavAccounts
-                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/2609d2f365a6ea61623559b29b0f4924~c5_100x100.jpeg?x-expires=1688378400&x-signature=T%2FN61oJemAeXL%2BGrN84UNTCCHHY%3D"
                 title="bestsongamday"
+                src={images.images8}
                 seeMore="Video: 97 Followers : 3214"
                 titleSub="Contact work : 980747828"
               />
               <NavAccounts
-                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/d5cc5df4242d41fc94c9067f697de6ae~c5_100x100.jpeg?x-expires=1688378400&x-signature=GfvZ8VNeWnK3%2F3kU7ir2FXQdUJA%3D"
                 title="anlyboutique"
+                src={images.images9}
                 seeMore="Video: 4 Followers : 23"
                 titleSub="Hàng si tuyển cao cấp, chất nhất, mẫu mã đa dạng, sỉ lẻ z.a.l.o: 0972359990"
               />
               <NavAccounts
-                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/9b5d11e782c0ea89e61fd6519d73c254~c5_100x100.jpeg?x-expires=1688378400&x-signature=fwf86X%2FpjBMNWqfA%2FWO7p3ULv2U%3D"
                 title="tucoi923"
+                src={images.images10}
                 seeMore="Video: 3 Followers : 421"
                 titleSub="Chttps://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/9b5d11e782c0ea89e61fd6519d73c254~c5_100x100.jpeg?x-expires=1688378400&x-signature=fwf86X%2FpjBMNWqfA%2FWO7p3ULv2U%3D"
               />
               <NavAccounts
-                src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/fb082c05cd148f1da3983e3b0e2a6c61~c5_100x100.jpeg?x-expires=1688378400&x-signature=Qjt3KQ%2B63hR01hE%2FmiMnEzf6QHs%3D"
                 title="nuochoaauth"
+                src={images.images11}
                 seeMore="Video: 17 Followers : 213"
               />
               <NavAccounts
-                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/25ec8b097ff643d10622602c8d5c43fe~c5_100x100.jpeg?x-expires=1688378400&x-signature=CLodQ8I6yrYMd%2BDrbvetHFVZFPc%3D"
                 title="matakoreafan"
+                src={images.images12}
                 seeMore="Video: 97 Followers : 213213"
                 titleSub="Livestream tại Tiktok 10h tối mỗi ngày"
               />

@@ -115,14 +115,15 @@ function Context({
               </div>
             </div>
             {btn__Following && (
-              <div
-                onClick={() => setFollow(!follow)}
-                className={cx("btn__following")}
-              >
+              <div className={cx("btn__following")}>
                 {follow ? (
-                  <Button primary>Follow</Button>
+                  <Button primary onClick={() => setFollow(!follow)}>
+                    Follow
+                  </Button>
                 ) : (
-                  <Button primaryActive>Following</Button>
+                  <Button primaryActive onClick={() => setFollow(!follow)}>
+                    Following
+                  </Button>
                 )}
               </div>
             )}

@@ -384,10 +384,7 @@ function Notification() {
               </div>
             </div>
             <div className={cx("content__follow__request")}>
-              <Image
-                className={cx("img")}
-                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/317345067fa70c6192893d87fe69c215.jpeg?x-expires=1688220000&x-signature=ziRdV6LhQfbS%2BQjg8DnCJk51sSM%3D"
-              />
+              <Image className={cx("img")} src={images.images12} />
               <div className={cx("list")}>
                 <span className={cx("title")}>webtech_ali</span>
                 <span className={cx("title__sub")}>WebTech_ali</span>

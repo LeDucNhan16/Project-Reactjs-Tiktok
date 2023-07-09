@@ -216,7 +216,6 @@ function Header() {
     {
       icon: <BookMarkIcon />,
       title: "Favorites",
-      to: config.routers.Profile,
     },
     {
       icon: <CoinIcon />,
